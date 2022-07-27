@@ -13,6 +13,7 @@ function AllRoutes() {
         <Route path="login" element={<Login />} />
         <Route path="count" element={<CounterView />} />
         <Route path="theme" element={<ThemeView />} />
+        <Route path="register" element={<RegisterView />} />
       </Routes>
     </div>
   )

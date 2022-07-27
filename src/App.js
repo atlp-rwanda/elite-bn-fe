@@ -17,8 +17,6 @@ function App() {
   return (
     <div>
       <Router>
-        <MenuBar />
-        <Nav />
         <AllRoutes />
       </Router>
     </div>
