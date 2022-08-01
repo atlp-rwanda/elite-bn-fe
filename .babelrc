@@ -3,11 +3,4 @@
 
 }
 
-// {
 
-//   "presets": [
-//       "@babel/preset-env", 
-//       "@babel/env",
-//       ["es2015", {"modules":false}]
-//   ]
-// }
