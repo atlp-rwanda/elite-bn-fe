@@ -15,6 +15,9 @@ import {Link} from 'react-router-dom'
                 <Link to ="/">
                   <li>Home</li>
                 </Link>
+                <Link to ="count">
+                  <li>Counter</li>
+                </Link>
             </ul>
         </nav>
        </div>
