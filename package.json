@@ -9,10 +9,11 @@
     "build": "webpack --mode production",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix --ext src/**/*.js",
+    "format": "prettier --write .",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-   "test:cov": "jest --config=jest.config.json  --coverage"
+    "test:cov": "jest --config=jest.config.json  --coverage"
   },
   "keywords": [],
   "author": "",
@@ -86,7 +87,6 @@
         }
       }
     ]
-     
   },
   "browserslist": {
     "production": [

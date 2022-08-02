@@ -1,12 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js',
-    
   },
   module: {
     rules: [
@@ -21,11 +20,11 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          'style-loader',
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
-          "sass-loader",
+          'sass-loader',
         ],
       },
       {
@@ -38,9 +37,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [
-          'html-loader',
-        ],
+        use: ['html-loader'],
       },
     ],
   },
@@ -49,4 +46,4 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-};
+}
