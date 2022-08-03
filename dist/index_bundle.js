@@ -6,24 +6,29 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/** *** */ (function () { // webpackBootstrap
-/** *** */ 	const __webpack_modules__ = ({
-
+/** *** */ ;(function () {
+  // webpackBootstrap
+  /** *** */ const __webpack_modules__ = {
     /***/ './src/index.js':
-    /*! **********************!*\
+      /*! **********************!*\
   !*** ./src/index.js ***!
   \********************* */
-    /***/ (function () {
-      eval('throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: Plugin/Preset files are not allowed to export objects, only functions. In C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\babel-preset-react\\\\lib\\\\index.js\\n    at createDescriptor (C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\config-descriptors.js:211:11)\\n    at createDescriptor.next (<anonymous>)\\n    at step (C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\gensync\\\\index.js:261:32)\\n    at C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\gensync\\\\index.js:273:13\\n    at async.call.result.err.err (C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\gensync\\\\index.js:223:11)");\n\n//# sourceURL=webpack://elite-bn-fe/./src/index.js?');
-      /***/ }),
+      /***/ function () {
+        eval(
+          'throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: Plugin/Preset files are not allowed to export objects, only functions. In C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\babel-preset-react\\\\lib\\\\index.js\\n    at createDescriptor (C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\config-descriptors.js:211:11)\\n    at createDescriptor.next (<anonymous>)\\n    at step (C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\gensync\\\\index.js:261:32)\\n    at C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\gensync\\\\index.js:273:13\\n    at async.call.result.err.err (C:\\\\Users\\\\HP\\\\OneDrive\\\\Documents\\\\Andela\\\\Elite team project\\\\front-end\\\\elite-bn-fe\\\\node_modules\\\\gensync\\\\index.js:223:11)");\n\n//# sourceURL=webpack://elite-bn-fe/./src/index.js?'
+        )
+        /***/
+      },
 
-    /** *** */ 	});
+    /** *** */
+  }
   /** ********************************************************************* */
   /** *** */
-  /** *** */ 	// startup
-  /** *** */ 	// Load entry module and return exports
-  /** *** */ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-  /** *** */ 	const __webpack_exports__ = {};
-  /** *** */ 	__webpack_modules__['./src/index.js']();
-/** *** */
-/** *** */ }());
+  /** *** */ // startup
+  /** *** */ // Load entry module and return exports
+  /** *** */ // This entry module doesn't tell about it's top-level declarations so it can't be inlined
+  /** *** */ const __webpack_exports__ = {}
+  /** *** */ __webpack_modules__['./src/index.js']()
+  /** *** */
+  /** *** */
+})()
