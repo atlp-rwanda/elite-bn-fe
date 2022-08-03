@@ -4,4 +4,3 @@
 yarn test
 yarn lint:fix
 yarn format
-git add -A
