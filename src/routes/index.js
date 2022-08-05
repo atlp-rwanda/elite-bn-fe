@@ -6,7 +6,6 @@ import RegisterView from "../Views/RegisterView";
 
 import { Route, Routes } from "react-router-dom";
 
-
 function AllRoutes(){
     return(
         <div>
