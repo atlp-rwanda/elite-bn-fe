@@ -15,6 +15,9 @@ export default function Nav() {
           <Link to="count">
             <li>Counter</li>
           </Link>
+          <Link to="theme">
+            <li>Themes</li>
+          </Link>
         </ul>
       </nav>
     </div>
