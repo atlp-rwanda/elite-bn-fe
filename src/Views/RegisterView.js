@@ -1,12 +1,11 @@
-import React from 'react';
-import Signup from '../components/Signup/signUp';
+import React from 'react'
+import Signup from '../components/Authentications/RegisterUser'
 
-function RegisterView(){
-   return (
-       <div>
-           <h1>Register to barefoot</h1> 
-           <Signup/>
-       </div>
-   )
+function RegisterView() {
+  return (
+    <div>
+      <Signup />
+    </div>
+  )
 }
-export default RegisterView;
+export default RegisterView

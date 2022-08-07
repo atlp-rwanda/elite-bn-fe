@@ -5,9 +5,9 @@ import orange from '@material-ui/core/colors/orange'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const Signup = () => {
-  const paperStyle = { padding: 20, height: '70vh', width: 469, margin: '20px auto' }
-  const btnstyle = { margin: '20px 0' }
-  const textField = { margin: '5px 0' }
+  const paperStyle = { padding: 20, height: '80vh', width: 469, margin: '50px auto' }
+  const btnstyle = { margin: '30px 0' }
+  const textField = { margin: '10px 0' }
   const theme = createTheme({
     palette: {
       neutral: {
