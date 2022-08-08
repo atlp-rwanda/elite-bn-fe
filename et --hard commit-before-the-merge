@@ -1,0 +1,305 @@
+[33m299d285b[m[33m ([m[1;36mHEAD -> [m[1;32mft-view-edit-profiles-#182201528[m[33m, [m[1;31morigin/ft-view-edit-profiles-#182201528[m[33m)[m HEAD@{0}: rebase -i (abort): updating HEAD
+[33m35144473[m HEAD@{1}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33mf37d2552[m HEAD@{2}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33mf689af4a[m HEAD@{3}: rebase -i (pick): feat(user profiles):user should be able to edit profiles
+[33mb2b266eb[m HEAD@{4}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m015b08d4[m HEAD@{5}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33ma13ebd0f[m HEAD@{6}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m3f585c1b[m HEAD@{7}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m53d4c76f[m HEAD@{8}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33m4c4c74ef[m HEAD@{9}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33m31fbbc07[m HEAD@{10}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33mc573c318[m HEAD@{11}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m833c4739[m HEAD@{12}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33mff93d59f[m HEAD@{13}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33mf481e5f4[m HEAD@{14}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33mf9b777c0[m HEAD@{15}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33m9509b83f[m HEAD@{16}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33mbc558339[m HEAD@{17}: rebase -i (pick): feat(user profiles):user should be able to edit profiles
+[33mb8624b5c[m HEAD@{18}: rebase -i (pick): feat(user profiles):user should be able to edit profiles
+[33me35378c5[m HEAD@{19}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m0a5e74c0[m HEAD@{20}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33mb6e19f45[m HEAD@{21}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m898b782e[m HEAD@{22}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33maa79bb4e[m HEAD@{23}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33m0bad97d5[m HEAD@{24}: rebase -i (pick): (ft-client-register-barefoot-182201524): Users should be able Signup/Register to Barefoot Nomad (#35)
+[33m084f0303[m HEAD@{25}: rebase -i (pick): fix(axios):fixing issues with webpack dotenv (#29)
+[33m1759553d[m HEAD@{26}: rebase -i (pick): feat(configure axios): configure axios to call api (#19) (#25)
+[33mf4cafcf3[m HEAD@{27}: rebase -i (pick): feat(configure axios): configure axios to call api (#19)
+[33m8e8fec9f[m HEAD@{28}: rebase -i (pick): ch(set-prettier): setting up prettier formater
+[33m4e5023fc[m HEAD@{29}: rebase -i (pick): ch(set-prettier): setting up prettier formater
+[33md40d56b2[m HEAD@{30}: rebase -i (pick): ch(set-up-redux): set up redux with toolkit
+[33m573024fc[m HEAD@{31}: rebase -i (pick): chore(github-actions-codeclimate): adding code climate and github actions
+[33m937b076e[m[33m ([m[1;31morigin/ch-configure-storybook-#182201523[m[33m)[m HEAD@{32}: rebase -i (start): checkout HEAD~30
+[33m299d285b[m[33m ([m[1;36mHEAD -> [m[1;32mft-view-edit-profiles-#182201528[m[33m, [m[1;31morigin/ft-view-edit-profiles-#182201528[m[33m)[m HEAD@{33}: pull: Merge made by the 'recursive' strategy.
+[33m3ee3f844[m HEAD@{34}: rebase -i (finish): returning to refs/heads/ft-view-edit-profiles-#182201528
+[33m3ee3f844[m HEAD@{35}: rebase -i (pick): feat(user profiles):user should be able to edit profiles
+[33m7e768bac[m HEAD@{36}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33mbacfe61f[m HEAD@{37}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m506a6fb9[m HEAD@{38}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33mc17393d1[m HEAD@{39}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m5fe22310[m HEAD@{40}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33mb88e78a6[m HEAD@{41}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33m110f0329[m HEAD@{42}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33mc8620b89[m HEAD@{43}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33mc3d5a44d[m HEAD@{44}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m6377ae43[m HEAD@{45}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m8bb86125[m HEAD@{46}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33mdf294207[m HEAD@{47}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33m578e85b2[m HEAD@{48}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33m9a21971f[m HEAD@{49}: rebase -i (pick): feat(user profiles):user should be able to edit profiles
+[33m6b698f85[m HEAD@{50}: rebase -i (pick): feat(user profiles):user should be able to edit profiles
+[33mb2781c59[m HEAD@{51}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m9e9b9686[m HEAD@{52}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m976432df[m HEAD@{53}: rebase -i (pick): feat(user profile):user should be edit and view profile preferences
+[33m3fd23b78[m HEAD@{54}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33mbeca4bbb[m HEAD@{55}: rebase -i (squash): feat(user profiles):user should be view and edit their profiles
+[33ma1bfaf6f[m HEAD@{56}: rebase -i (squash): # This is a combination of 7 commits.
+[33m61daa8e3[m HEAD@{57}: rebase -i (squash): # This is a combination of 6 commits.
+[33mf9d7ffb1[m HEAD@{58}: rebase -i (squash): # This is a combination of 5 commits.
+[33m6824ff2c[m HEAD@{59}: rebase -i (squash): # This is a combination of 4 commits.
+[33md628dc6b[m HEAD@{60}: rebase -i (squash): # This is a combination of 3 commits.
+[33m41eb7c48[m HEAD@{61}: rebase -i (squash): # This is a combination of 2 commits.
+[33m7e8274f8[m HEAD@{62}: rebase -i (start): checkout HEAD~28
+[33mb88aa831[m HEAD@{63}: rebase -i (abort): updating HEAD
+[33mb88aa831[m HEAD@{64}: rebase -i (abort): updating HEAD
+[33mb88aa831[m HEAD@{65}: rebase -i (abort): updating HEAD
+[33m722f6e3f[m HEAD@{66}: rebase -i (squash): feat(user profile):user should be edit and view profile preferences
+[33md8815836[m HEAD@{67}: rebase -i (squash): # This is a combination of 7 commits.
+[33ma728fcaa[m HEAD@{68}: rebase -i (squash): # This is a combination of 6 commits.
+[33mbed3df17[m HEAD@{69}: rebase -i (squash): # This is a combination of 5 commits.
+[33mdc5c8d95[m HEAD@{70}: rebase -i (squash): # This is a combination of 4 commits.
+[33mc268f704[m HEAD@{71}: rebase -i (squash): # This is a combination of 3 commits.
+[33mfc9fa001[m HEAD@{72}: rebase -i (squash): # This is a combination of 2 commits.
+[33mf2538241[m HEAD@{73}: rebase -i (start): checkout HEAD~19
+[33mb88aa831[m HEAD@{74}: rebase finished: returning to refs/heads/ft-view-edit-profiles-#182201528
+[33mb88aa831[m HEAD@{75}: rebase: feat(user profiles):user should be able to edit profiles
+[33m0faa46f9[m HEAD@{76}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mafad9ef7[m HEAD@{77}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mbf9455b0[m HEAD@{78}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mdc5541e2[m HEAD@{79}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mb4705325[m HEAD@{80}: rebase: feat(user profiles):user should be view and edit their profiles
+[33mbbd73625[m HEAD@{81}: rebase: feat(profiles):user should be able to view and edit profiles
+[33m8800c385[m HEAD@{82}: rebase: feat(user profiles):user should be view and edit their profiles
+[33m77d4841d[m HEAD@{83}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mbb84b8e0[m HEAD@{84}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m4b3bd63b[m HEAD@{85}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m7b61a38a[m HEAD@{86}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m972f5652[m HEAD@{87}: rebase: feat(profiles):user should be able to view and edit profiles
+[33m05bfb137[m HEAD@{88}: rebase: feat(user profiles):user should be view and edit their profiles
+[33mf10f5499[m HEAD@{89}: rebase: feat(user profiles):user should be able to edit profiles
+[33mf398fe36[m HEAD@{90}: rebase: feat(user profiles):user should be able to edit profiles
+[33me3afaad1[m HEAD@{91}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m9d4d46d6[m HEAD@{92}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mf2538241[m HEAD@{93}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m982fb4ff[m HEAD@{94}: rebase: feat(profiles):user should be able to view and edit profiles
+[33m5d46714b[m HEAD@{95}: rebase: feat(user profiles):user should be view and edit their profiles
+[33m39b28adc[m HEAD@{96}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m6444d4f2[m HEAD@{97}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m260f6af9[m HEAD@{98}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mcc08fd0e[m HEAD@{99}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m96df7613[m HEAD@{100}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m1a474ad6[m HEAD@{101}: rebase: feat(profiles):user should be able to view and edit profiles
+[33m7e8274f8[m HEAD@{102}: rebase: feat(user profiles):user should be view and edit their profiles
+[33m70425cf9[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m HEAD@{103}: rebase: checkout dev
+[33m44afeab9[m HEAD@{104}: rebase -i (abort): updating HEAD
+[33mf4dd6a6e[m HEAD@{105}: rebase -i (continue): feat(user profile):user should be edit and view profile preferences
+[33m49c66dd7[m HEAD@{106}: rebase -i (continue): feat(user profile):user should be edit and view profile preferences
+[33m84c92198[m HEAD@{107}: rebase -i (continue): feat(user profile):user should be edit and view profile preferences
+[33m4b9487ec[m HEAD@{108}: rebase -i (continue): feat(user profiles):user should be view and edit their profiles
+[33m9738ba2e[m HEAD@{109}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33m7de8c4a8[m HEAD@{110}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33m9d522b41[m HEAD@{111}: rebase -i (continue): feat(user profile):user should be edit and view profile preferences
+[33m2d42a6b0[m HEAD@{112}: rebase -i (continue): feat(user profile):user should be edit and view profile preferences
+[33md04b6178[m HEAD@{113}: rebase -i (pick): feat(profiles):user should be able to view and edit profiles
+[33maa26abb1[m HEAD@{114}: rebase -i (pick): feat(user profiles):user should be view and edit their profiles
+[33m924a3f9e[m HEAD@{115}: rebase -i (start): checkout HEAD~19
+[33m44afeab9[m HEAD@{116}: commit (merge): feat(user profiles):user should be able to edit profiles
+[33m924a3f9e[m HEAD@{117}: commit: feat(user profiles):user should be able to edit profiles
+[33m288bcb13[m HEAD@{118}: rebase finished: returning to refs/heads/ft-view-edit-profiles-#182201528
+[33m288bcb13[m HEAD@{119}: rebase: feat(user profiles):user should be able to edit profiles
+[33m4d7bfd35[m HEAD@{120}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mb62777e4[m HEAD@{121}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m13df1435[m HEAD@{122}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m010c625f[m HEAD@{123}: rebase: feat(profiles):user should be able to view and edit profiles
+[33ma9b5aeec[m HEAD@{124}: rebase: feat(user profiles):user should be view and edit their profiles
+[33me6304ebe[m HEAD@{125}: rebase: feat(user profile):user should be edit and view profile preferences
+[33mb525e771[m HEAD@{126}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m2184b1c8[m HEAD@{127}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m5f1bad74[m HEAD@{128}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m60028861[m HEAD@{129}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m929d44df[m HEAD@{130}: rebase: feat(profiles):user should be able to view and edit profiles
+[33mbf5dd4fd[m HEAD@{131}: rebase: feat(user profiles):user should be view and edit their profiles
+[33m70425cf9[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m HEAD@{132}: rebase: checkout dev
+[33m858654c2[m HEAD@{133}: checkout: moving from dev to ft-view-edit-profiles-#182201528
+[33m70425cf9[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m HEAD@{134}: pull: Fast-forward
+[33m8da35eff[m HEAD@{135}: checkout: moving from ft-view-edit-profiles-#182201528 to dev
+[33m858654c2[m HEAD@{136}: commit: feat(user profiles):user should be able to edit profiles
+[33medaa56d2[m HEAD@{137}: commit (merge): feat(user profile):user should be edit and view profile preferences
+[33m853350b4[m HEAD@{138}: commit: feat(user profile):user should be edit and view profile preferences
+[33m2626a4bc[m HEAD@{139}: rebase finished: returning to refs/heads/ft-view-edit-profiles-#182201528
+[33m2626a4bc[m HEAD@{140}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m3c437ab0[m HEAD@{141}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m8bb63e72[m HEAD@{142}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m4f1d0378[m HEAD@{143}: rebase: feat(user profile):user should be edit and view profile preferences
+[33m2ecc3d4a[m HEAD@{144}: rebase: feat(profiles):user should be able to view and edit profiles
+[33maca88121[m HEAD@{145}: rebase: feat(user profiles):user should be view and edit their profiles
+[33m8da35eff[m HEAD@{146}: rebase: checkout dev
+[33m77d3b7cd[m HEAD@{147}: checkout: moving from dev to ft-view-edit-profiles-#182201528
+[33m8da35eff[m HEAD@{148}: pull: Fast-forward
+[33m2e7500a5[m HEAD@{149}: checkout: moving from ft-view-edit-profiles-#182201528 to dev
+[33m77d3b7cd[m HEAD@{150}: commit: feat(user profile):user should be edit and view profile preferences
+[33m41b59be2[m HEAD@{151}: commit: feat(user profile):user should be edit and view profile preferences
+[33m81c1830f[m HEAD@{152}: commit: feat(user profile):user should be edit and view profile preferences
+[33m5eaa7399[m HEAD@{153}: commit: feat(user profile):user should be edit and view profile preferences
+[33m482a6653[m HEAD@{154}: checkout: moving from bg-fix-configure-axios-#182906952 to ft-view-edit-profiles-#182201528
+[33m7fd648f5[m[33m ([m[1;31morigin/bg-fix-configure-axios-#182906952[m[33m, [m[1;32mbg-fix-configure-axios-#182906952[m[33m)[m HEAD@{155}: rebase -i (finish): returning to refs/heads/bg-fix-configure-axios-#182906952
+[33m7fd648f5[m[33m ([m[1;31morigin/bg-fix-configure-axios-#182906952[m[33m, [m[1;32mbg-fix-configure-axios-#182906952[m[33m)[m HEAD@{156}: rebase -i (squash): fix(axios):fixing issues with webpack dotenv
+[33m745bb4a1[m HEAD@{157}: rebase -i (start): checkout HEAD~2
+[33m70fa7181[m HEAD@{158}: commit: fix(axios):fixing issues with webpack dotenv
+[33m745bb4a1[m HEAD@{159}: commit: fix(axios):fixing issues with webpack dotenv
+[33m2e7500a5[m HEAD@{160}: checkout: moving from ft-view-edit-profiles-#182201528 to bg-fix-configure-axios-#182906952
+[33m482a6653[m HEAD@{161}: checkout: moving from bg-fix-configure-axios-#182906952 to ft-view-edit-profiles-#182201528
+[33m2e7500a5[m HEAD@{162}: checkout: moving from dev to bg-fix-configure-axios-#182906952
+[33m2e7500a5[m HEAD@{163}: checkout: moving from ft-view-edit-profiles-#182201528 to dev
+[33m482a6653[m HEAD@{164}: checkout: moving from dev to ft-view-edit-profiles-#182201528
+[33m2e7500a5[m HEAD@{165}: checkout: moving from ft-view-edit-profiles-#182201528 to dev
+[33m482a6653[m HEAD@{166}: commit (merge): feat(profiles):user should be able to view and edit profiles
+[33mf7805a3b[m HEAD@{167}: commit: feat(profiles):user should be able to view and edit profiles
+[33m72ee8a0a[m HEAD@{168}: rebase finished: returning to refs/heads/ft-view-edit-profiles-#182201528
+[33m72ee8a0a[m HEAD@{169}: rebase: feat(user profiles):user should be view and edit their profiles
+[33m2e7500a5[m HEAD@{170}: rebase: checkout dev
+[33m12880d8a[m HEAD@{171}: checkout: moving from dev to ft-view-edit-profiles-#182201528
+[33m2e7500a5[m HEAD@{172}: pull: Fast-forward
+[33m3e57af5f[m HEAD@{173}: checkout: moving from ft-configure-axios-#182906952 to dev
+[33m3e738f3b[m[33m ([m[1;31morigin/ft-configure-axios-#182906952[m[33m, [m[1;32mft-configure-axios-#182906952[m[33m)[m HEAD@{174}: checkout: moving from ft-view-edit-profiles-#182201528 to ft-configure-axios-#182906952
+[33m12880d8a[m HEAD@{175}: commit: feat(user profiles):user should be view and edit their profiles
+[33m3e57af5f[m HEAD@{176}: checkout: moving from dev to ft-view-edit-profiles-#182201528
+[33m3e57af5f[m HEAD@{177}: pull: Fast-forward
+[33m3bda6fbe[m HEAD@{178}: checkout: moving from ft-configure-axios-#182906952 to dev
+[33m3e738f3b[m[33m ([m[1;31morigin/ft-configure-axios-#182906952[m[33m, [m[1;32mft-configure-axios-#182906952[m[33m)[m HEAD@{179}: rebase -i (finish): returning to refs/heads/ft-configure-axios-#182906952
+[33m3e738f3b[m[33m ([m[1;31morigin/ft-configure-axios-#182906952[m[33m, [m[1;32mft-configure-axios-#182906952[m[33m)[m HEAD@{180}: rebase -i (squash): feat(axios):configure axios
+[33m0f2a1d1b[m HEAD@{181}: rebase -i (squash): # This is a combination of 2 commits.
+[33maec48c2a[m HEAD@{182}: rebase -i (start): checkout HEAD~3
+[33m6806a8cd[m HEAD@{183}: commit: feat(axios):configure axios to call api
+[33mbb35dd87[m HEAD@{184}: commit: feat(axios):configure axios to call api
+[33maec48c2a[m HEAD@{185}: rebase -i (finish): returning to refs/heads/ft-configure-axios-#182906952
+[33maec48c2a[m HEAD@{186}: rebase -i (squash): feat(axios):configure axios
+[33m6c8fea8f[m HEAD@{187}: rebase -i (start): checkout HEAD~2
+[33mc7197801[m HEAD@{188}: commit: feat(Axios):configure axios
+[33m6c8fea8f[m HEAD@{189}: commit: feat(axios):configure axios
+[33m3bda6fbe[m HEAD@{190}: checkout: moving from dev to ft-configure-axios-#182906952
+[33m3bda6fbe[m HEAD@{191}: pull: Fast-forward
+[33m0d914393[m HEAD@{192}: checkout: moving from ch-github-read-me-182201522 to dev
+[33mcab95088[m[33m ([m[1;31morigin/ch-github-read-me-182201522[m[33m, [m[1;32mch-github-read-me-182201522[m[33m)[m HEAD@{193}: rebase -i (finish): returning to refs/heads/ch-github-read-me-182201522
+[33mcab95088[m[33m ([m[1;31morigin/ch-github-read-me-182201522[m[33m, [m[1;32mch-github-read-me-182201522[m[33m)[m HEAD@{194}: rebase -i (squash): chore(readme):setting github readme
+[33m07b1582d[m HEAD@{195}: rebase -i (start): checkout HEAD~2
+[33m8158f56a[m HEAD@{196}: commit: chore(readme):setting github readme
+[33m07b1582d[m HEAD@{197}: rebase finished: returning to refs/heads/ch-github-read-me-182201522
+[33m07b1582d[m HEAD@{198}: rebase: chore(readme):setting github readme
+[33m0d914393[m HEAD@{199}: rebase: checkout dev
+[33mb3bfeae4[m HEAD@{200}: reset: moving to origin/ch-github-read-me-182201522
+[33m8c8a8ec9[m HEAD@{201}: rebase finished: returning to refs/heads/ch-github-read-me-182201522
+[33m8c8a8ec9[m HEAD@{202}: rebase: chore(readme):setting github readme
+[33m0d914393[m HEAD@{203}: rebase: checkout dev
+[33mae7127b5[m HEAD@{204}: rebase finished: returning to refs/heads/ch-github-read-me-182201522
+[33mae7127b5[m HEAD@{205}: pull --rebase: set up react router dom
+[33mb3bfeae4[m HEAD@{206}: pull --rebase: checkout b3bfeae4e8f3765c69ab691fcbf0668ce9cf0ab8
+[33m59d6b585[m HEAD@{207}: rebase finished: returning to refs/heads/ch-github-read-me-182201522
+[33m59d6b585[m HEAD@{208}: rebase: chore(readme):setting github readme
+[33m0d914393[m HEAD@{209}: rebase: checkout dev
+[33mb3bfeae4[m HEAD@{210}: checkout: moving from dev to ch-github-read-me-182201522
+[33m0d914393[m HEAD@{211}: pull: Fast-forward
+[33mf37c65f5[m HEAD@{212}: checkout: moving from ch-github-read-me-182201522 to dev
+[33mb3bfeae4[m HEAD@{213}: checkout: moving from ch-setup-react-router-dom-#182201519 to ch-github-read-me-182201522
+[33ma98a9683[m[33m ([m[1;31morigin/ch-setup-react-router-dom-#182201519[m[33m, [m[1;32mch-setup-react-router-dom-#182201519[m[33m)[m HEAD@{214}: rebase -i (finish): returning to refs/heads/ch-setup-react-router-dom-#182201519
+[33ma98a9683[m[33m ([m[1;31morigin/ch-setup-react-router-dom-#182201519[m[33m, [m[1;32mch-setup-react-router-dom-#182201519[m[33m)[m HEAD@{215}: rebase -i (squash): set up react router dom
+[33me52f23ec[m HEAD@{216}: rebase -i (squash): # This is a combination of 2 commits.
+[33mb249e84c[m HEAD@{217}: rebase -i (start): checkout HEAD~3
+[33m3021597c[m HEAD@{218}: rebase -i (finish): returning to refs/heads/ch-setup-react-router-dom-#182201519
+[33m3021597c[m HEAD@{219}: rebase -i (start): checkout HEAD~3
+[33m3021597c[m HEAD@{220}: rebase -i (abort): updating HEAD
+[33mf37c65f5[m HEAD@{221}: rebase -i (start): checkout HEAD~3
+[33m3021597c[m HEAD@{222}: checkout: moving from dev to ch-setup-react-router-dom-#182201519
+[33mf37c65f5[m HEAD@{223}: checkout: moving from ch-setup-react-router-dom-#182201519 to dev
+[33m3021597c[m HEAD@{224}: rebase -i (finish): returning to refs/heads/ch-setup-react-router-dom-#182201519
+[33m3021597c[m HEAD@{225}: rebase -i (start): checkout HEAD~3
+[33m3021597c[m HEAD@{226}: commit: chore(routes):set up react router dom
+[33m3cab0267[m HEAD@{227}: commit: chore(routes):set up react router dom
+[33mb249e84c[m HEAD@{228}: checkout: moving from ch-github-read-me-182201522 to ch-setup-react-router-dom-#182201519
+[33mb3bfeae4[m HEAD@{229}: commit: chore(readme):setting github readme
+[33mf37c65f5[m HEAD@{230}: checkout: moving from ch-github-read-me-#182201522 to ch-github-read-me-182201522
+[33m3ac3de0b[m[33m ([m[1;31morigin/ch-github-read-me-#182201522[m[33m, [m[1;32mch-github-read-me-#182201522[m[33m)[m HEAD@{231}: checkout: moving from ch-github-read-me-182201522 to ch-github-read-me-#182201522
+[33mf37c65f5[m HEAD@{232}: checkout: moving from dev to ch-github-read-me-182201522
+[33mf37c65f5[m HEAD@{233}: checkout: moving from ch-github-read-me-#182201522 to dev
+[33m3ac3de0b[m[33m ([m[1;31morigin/ch-github-read-me-#182201522[m[33m, [m[1;32mch-github-read-me-#182201522[m[33m)[m HEAD@{234}: rebase -i (abort): updating HEAD
+[33md196f60e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{235}: rebase -i (start): checkout HEAD~7
+[33m3ac3de0b[m[33m ([m[1;31morigin/ch-github-read-me-#182201522[m[33m, [m[1;32mch-github-read-me-#182201522[m[33m)[m HEAD@{236}: rebase: updating HEAD
+[33mf1efb15e[m HEAD@{237}: rebase: chore(readme):setting github readme
+[33m449e3a75[m HEAD@{238}: rebase: chore(readme):setting github readme
+[33m48799732[m HEAD@{239}: rebase: ch(setup-react-project): Setup an empty react project
+[33mf37c65f5[m HEAD@{240}: rebase: checkout dev
+[33m3ac3de0b[m[33m ([m[1;31morigin/ch-github-read-me-#182201522[m[33m, [m[1;32mch-github-read-me-#182201522[m[33m)[m HEAD@{241}: rebase: updating HEAD
+[33m20cd6736[m HEAD@{242}: rebase: chore(readme):setting github readme
+[33ma41e5d91[m HEAD@{243}: rebase: chore(readme):setting github readme
+[33ma20fa95b[m HEAD@{244}: rebase: ch(setup-react-project): Setup an empty react project
+[33mf37c65f5[m HEAD@{245}: rebase: checkout dev
+[33m3ac3de0b[m[33m ([m[1;31morigin/ch-github-read-me-#182201522[m[33m, [m[1;32mch-github-read-me-#182201522[m[33m)[m HEAD@{246}: rebase: updating HEAD
+[33mbedba280[m HEAD@{247}: rebase: chore(readme):setting github readme
+[33m5c5c9cad[m HEAD@{248}: rebase: chore(readme):setting github readme
+[33m803b0582[m HEAD@{249}: rebase: ch(setup-react-project): Setup an empty react project
+[33mf37c65f5[m HEAD@{250}: rebase: checkout dev
+[33m3ac3de0b[m[33m ([m[1;31morigin/ch-github-read-me-#182201522[m[33m, [m[1;32mch-github-read-me-#182201522[m[33m)[m HEAD@{251}: rebase: updating HEAD
+[33mcb469946[m HEAD@{252}: rebase: chore(readme):setting github readme
+[33m2072f0a4[m HEAD@{253}: rebase: chore(readme):setting github readme
+[33m527f054d[m HEAD@{254}: rebase: ch(setup-react-project): Setup an empty react project
+[33mf37c65f5[m HEAD@{255}: rebase: checkout dev
+[33m3ac3de0b[m[33m ([m[1;31morigin/ch-github-read-me-#182201522[m[33m, [m[1;32mch-github-read-me-#182201522[m[33m)[m HEAD@{256}: pull: Merge made by the 'recursive' strategy.
+[33m5ba6df17[m HEAD@{257}: checkout: moving from dev to ch-github-read-me-#182201522
+[33mf37c65f5[m HEAD@{258}: checkout: moving from ch-github-read-me-#182201522 to dev
+[33m5ba6df17[m HEAD@{259}: rebase -i (abort): updating HEAD
+[33mf37c65f5[m HEAD@{260}: rebase -i (start): checkout HEAD~3
+[33m5ba6df17[m HEAD@{261}: checkout: moving from dev to ch-github-read-me-#182201522
+[33mf37c65f5[m HEAD@{262}: checkout: moving from ch-github-read-me-#182201522 to dev
+[33m5ba6df17[m HEAD@{263}: rebase finished: returning to refs/heads/ch-github-read-me-#182201522
+[33m5ba6df17[m HEAD@{264}: rebase: chore(readme):setting github readme
+[33m0c7d2dba[m HEAD@{265}: rebase: chore(readme):setting github readme
+[33m891efb3b[m HEAD@{266}: rebase: ch(setup-react-project): Setup an empty react project
+[33mf37c65f5[m HEAD@{267}: rebase: checkout dev
+[33maf8d147a[m HEAD@{268}: rebase -i (finish): returning to refs/heads/ch-github-read-me-#182201522
+[33maf8d147a[m HEAD@{269}: rebase -i (start): checkout HEAD~3
+[33maf8d147a[m HEAD@{270}: rebase -i (abort): updating HEAD
+[33md196f60e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{271}: rebase -i (start): checkout HEAD~3
+[33maf8d147a[m HEAD@{272}: commit: chore(readme):setting github readme
+[33m5e803b53[m HEAD@{273}: commit: chore(readme):setting github readme
+[33mdf48c8cc[m HEAD@{274}: rebase -i (finish): returning to refs/heads/ch-github-read-me-#182201522
+[33mdf48c8cc[m HEAD@{275}: rebase -i (squash): ch(setup-react-project): Setup an empty react project
+[33m712d9d24[m HEAD@{276}: rebase -i (squash): # This is a combination of 3 commits.
+[33mf84e07a9[m HEAD@{277}: rebase -i (squash): # This is a combination of 2 commits.
+[33m2e0a70f6[m HEAD@{278}: rebase -i (start): checkout HEAD~4
+[33m001da4b2[m HEAD@{279}: rebase finished: returning to refs/heads/ch-github-read-me-#182201522
+[33m001da4b2[m HEAD@{280}: rebase: chore(circleci):setting circleci to run test
+[33mf37c65f5[m HEAD@{281}: rebase: checkout dev
+[33ma98bf409[m HEAD@{282}: rebase: updating HEAD
+[33mf37c65f5[m HEAD@{283}: rebase: checkout dev
+[33ma98bf409[m HEAD@{284}: commit: chore(readme):setting github readme
+[33m715e86e5[m HEAD@{285}: checkout: moving from dev to ch-github-read-me-#182201522
+[33mf37c65f5[m HEAD@{286}: pull: Fast-forward
+[33meb7eac4f[m HEAD@{287}: checkout: moving from ch-github-read-me-#182201522 to dev
+[33m715e86e5[m HEAD@{288}: commit: chore(readme):setting github readme
+[33m265b06a9[m[33m ([m[1;32mch-settting-codeclimate-test-coverage-182201521[m[33m)[m HEAD@{289}: checkout: moving from ch-settting-codeclimate-test-coverage-182201521 to ch-github-read-me-#182201522
+[33m265b06a9[m[33m ([m[1;32mch-settting-codeclimate-test-coverage-182201521[m[33m)[m HEAD@{290}: commit: chore(circleci):setting circleci to run test
+[33m5e8fa9e0[m HEAD@{291}: checkout: moving from dev to ch-settting-codeclimate-test-coverage-182201521
+[33meb7eac4f[m HEAD@{292}: pull: Fast-forward
+[33m8667c982[m HEAD@{293}: checkout: moving from ch-setup-react-project-#182201515 to dev
+[33ma394b2b8[m[33m ([m[1;31morigin/ch-setup-react-project-#182201515[m[33m, [m[1;32mch-setup-react-project-#182201515[m[33m)[m HEAD@{294}: commit: fix(bad spelling):Component to component
+[33m2e0a70f6[m HEAD@{295}: checkout: moving from dev to ch-setup-react-project-#182201515
+[33m8667c982[m HEAD@{296}: checkout: moving from ch-setup-sass-#182201520 to dev
+[33mced974e2[m[33m ([m[1;31morigin/ch-setup-sass-#182201520[m[33m, [m[1;32mch-setup-sass-#182201520[m[33m)[m HEAD@{297}: rebase -i (finish): returning to refs/heads/ch-setup-sass-#182201520
+[33mced974e2[m[33m ([m[1;31morigin/ch-setup-sass-#182201520[m[33m, [m[1;32mch-setup-sass-#182201520[m[33m)[m HEAD@{298}: rebase -i (squash): chore:(setting scss and css):enable client to use css and scss
+[33m1bb1dd6e[m HEAD@{299}: rebase -i (start): checkout HEAD~2
+[33m70205042[m HEAD@{300}: commit: chore(setting scss and css):enable user to use scss or css
+[33m1bb1dd6e[m HEAD@{301}: commit: chore:(setting scss and css):enable client to use css and scss
+[33m8667c982[m HEAD@{302}: checkout: moving from dev to ch-setup-sass-#182201520
+[33m8667c982[m HEAD@{303}: checkout: moving from main to dev
+[33md196f60e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{304}: clone: from https://github.com/atlp-rwanda/elite-bn-fe.git
