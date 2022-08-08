@@ -1,39 +1,16 @@
 import React from 'react'
+import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@material-ui/core'
 
+const Logout=()=>{
 
-const Logout=() =>{
-    
-    const logoutfetch = async () => {
-      try {
-        const res = await fetch("/logout", {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        });
-  
-        if (res.status === 401 || !res) {
-          window.alert("please logout later");
-        } else {
-          window.location.reload();
-          history.push("/login");
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    userEffect(() => {
-      logoutfetch();
-    
-    }, []);
-  
-    return (
-      <div>
-  
-      </div>
-    ) 
-  }
-  export default Logout;
+    const btnstyle={margin:'8px 0' , width:'30px'}
+    return(
+        <Grid>
+           
+                <Button type='submit' color='primary' variant="contained" style={btnstyle}  omfullWidth>Logout</Button>
+              
+        </Grid>
+    )
+}
 
+export default Logout
