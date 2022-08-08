@@ -35,7 +35,9 @@
     "redux-persist": "^6.0.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.18.9",
