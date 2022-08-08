@@ -6,7 +6,9 @@ import Checkbox from '@material-ui/core/Checkbox';
 const Login=()=>{
 
     const paperStyle={padding :20,height:'50vh',width:350, margin:"20px auto"}
-    const btnstyle={margin:'8px 0'}
+    const btnstyle={margin:'8px 0', background: '#FFC107'}
+    const btnstylesocial={margin:'8px 0', background: 'transparent', color: '#FFC107'}
+
     return(
         <Grid>
             <Paper elevation={10} style={paperStyle}>
@@ -27,11 +29,12 @@ const Login=()=>{
                         Forgot password ?
                 </Link>
 
-                {/* <TextField label='google' placeholder='login with google'/>
-                <TextField label='facebook' placeholder='login with facebook' /> */}
+                <Button type='submit' color='primary' variant="contained" style={btnstylesocial} fullWidth>Sign in with Google</Button>
+                <Button type='submit' color='primary' variant="contained" style={btnstylesocial} fullWidth>Sign in with Facebook</Button>
+                
 
                 </Typography>
-                <Typography > Do you have an account ?
+                <Typography > Don't have an account?
                      <Link href="#" >
                         Sign Up 
                 </Link>
