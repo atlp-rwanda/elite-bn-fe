@@ -1,20 +1,26 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App'
-import { StrictMode } from 'react'
 import { Provider } from 'react-redux'
-import { persistor, store } from './redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
+import App from './App'
+import { persistor, store } from './redux/store'
 import './styles/index.scss'
+import Paper from '@material-ui/core/Paper'
+import { ThemeProvider } from '@material-ui/core/styles'
+import theme from './theme/theme'
 
 const container = document.getElementById('app')
 const root = createRoot(container)
 root.render(
-  <StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <App tab="home" />
-      </PersistGate>
-    </Provider>
-  </StrictMode>
+  <ThemeProvider theme={theme}>
+    <StrictMode>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <Paper style={{ height: '100vh', width: '98vw' }}>
+            <App tab="home" />
+          </Paper>
+        </PersistGate>
+      </Provider>
+    </StrictMode>
+  </ThemeProvider>
 )
