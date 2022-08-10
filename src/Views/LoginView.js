@@ -1,9 +1,10 @@
 import React from 'react'
+import Login from '../components/Authentications/login'
 
 function LoginView() {
   return (
     <div>
-      <h1>Login to barefoot</h1>
+      <Login />
     </div>
   )
 }
