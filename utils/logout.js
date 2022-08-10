@@ -1,5 +1,5 @@
 
-const Logout=() =>{
+const LogoutApi=() =>{
     
     const logoutfetch = async () => {
       try {
@@ -34,5 +34,5 @@ const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/logout`,{
       </div>
     ) 
   }
-  export default Logout;
+  export default LogoutApi;
 
