@@ -4,9 +4,14 @@ import {useDispatch} from 'react-redux'
 import { logoutRequest } from '../redux/actions/auth/logout'
 
 
+
+
+
 const Logout=()=>{
     const dispatch=useDispatch()
+    
 function handleLogout(){
+
 dispatch(logoutRequest())
     console.log("clicked logout")
 }

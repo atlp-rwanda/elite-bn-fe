@@ -7,13 +7,13 @@ import { Route, Routes } from 'react-router-dom'
 
 function AllRoutes() {
   return (
-    <div>
+    
       <Routes>
         <Route path="/" element={<HomeView />} />
         <Route path="login" element={<Login />} />
         <Route path="count" element={<CounterView />} />
       </Routes>
-    </div>
+    
   )
 }
 export default AllRoutes
