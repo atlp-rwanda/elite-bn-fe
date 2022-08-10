@@ -6,12 +6,17 @@ import user from '@testing-library/user-event'
 import registerReducer, { setToken } from '../src/redux/features/registerReducer'
 import api from '../utils/api'
 
+import { act } from 'react-dom/test-utils'
+
 describe('findByText Examples', () => {
   test('should show a required field warning for each empty input field', async () => {
     render(<Signup />)
-    const submit = screen.getByTestId('Create account')
-    user.click(submit)
-    expect(submit.disabled).toBe(false)
+
+    act(() => {
+      const submit = screen.getByTestId('Create account')
+      fireEvent.click(submit)
+      expect(submit.disabled).toBe(false)
+    })
     expect(await screen.findByText('Please enter your first name is required')).toBeVisible()
     expect(await screen.findByText('Please enter your last name is required')).toBeVisible()
     expect(await screen.findByText('Please enter your username is equired')).toBeVisible()

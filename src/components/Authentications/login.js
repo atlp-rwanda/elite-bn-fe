@@ -167,7 +167,7 @@ const Login = () => {
           )}
         </Formik>
         <Typography>
-          <Link href="#" style={{ color: orange[400] }} underline="none">
+          <Link href="forgot-password" style={{ color: orange[400] }} underline="none">
             {' '}
             Forgot password ?{' '}
           </Link>

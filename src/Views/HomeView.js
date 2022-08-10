@@ -1,4 +1,6 @@
 import React from 'react'
+import Nav from '../dammyNav'
+import MenuBar from '../MenuBar/MenuBar'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
