@@ -11,8 +11,9 @@ function App() {
       <Router>
         <Nav />
         <AllRoutes />
+        <Logout />
       </Router>
-      <Logout />
+     
     </div>
   )
 }
