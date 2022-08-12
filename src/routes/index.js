@@ -6,17 +6,21 @@ import CounterView from '../Views/CounterView'
 import ThemeView from '../Views/ThemeView'
 import RegisterView from '../Views/RegisterView'
 import DashboardView from '../Views/Dashboard'
+import PrivateRoutes from '../../utils/privateRoute'
 
 function AllRoutes() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomeView />} />
+
+        <Route  element={<PrivateRoutes/>}>
+          <Route exact path="/" element={<HomeView/>}/>
+          <Route path="count" element={<CounterView />} />
+          <Route path="theme" element={<ThemeView />} />
+          <Route path="dashboard" element={<DashboardView />} />
+        </Route >
         <Route path="login" element={<Login />} />
-        <Route path="count" element={<CounterView />} />
-        <Route path="theme" element={<ThemeView />} />
         <Route path="register" element={<RegisterView />} />
-        <Route path="dashboard" element={<DashboardView />} />
       </Routes>
     </div>
   )

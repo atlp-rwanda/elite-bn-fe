@@ -16,7 +16,7 @@ root.render(
     <StrictMode>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <Paper style={{ height: '100vh', width: '98vw' }}>
+          <Paper style={{ height: '0vh', width: '98vw' }}>
             <App tab="home" />
           </Paper>
         </PersistGate>
