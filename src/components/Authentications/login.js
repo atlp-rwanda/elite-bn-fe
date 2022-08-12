@@ -1,42 +1,51 @@
-import React, { useEffect, useState } from 'react'
-import { Grid, Paper, TextField, Typography, Link } from '@material-ui/core'
-import Button from '@mui/material/Button'
-import orange from '@material-ui/core/colors/orange'
-import GoogleIcon from '@mui/icons-material/Google'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import api from '../../../utils/api'
+import React, { useEffect, useState } from 'react';
+import {
+ Grid, Paper, TextField, Typography, Link 
+} from '@material-ui/core';
+import Button from '@mui/material/Button';
+import orange from '@material-ui/core/colors/orange';
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {
+ Formik, Form, Field, ErrorMessage 
+} from 'formik';
 import Snackbar from '@mui/material/Snackbar'
 import { useDispatch } from 'react-redux'
 import { setToken } from '../../redux/features/login'
 import MuiAlert from '@mui/material/Alert'
-;<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+;import api from '../../../utils/api'
 
-const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
-})
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />;
+
+const Alert = React.forwardRef((props, ref) => {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Login = () => {
-  const paperStyle = { padding: 20, height: '20%', width: 300, margin: '100px auto' }
-  const btnstyle = { margin: '8px 0', display: 'fixed' }
-  const textField = { margin: '15px 5px 5px 0' }
-  const btnstylesocial = { margin: '10px 0', backgroundColor: 'transparent', color: '#FFC107' }
-  const signupLink = { margin: '20px 0px 0px 0px' }
+  const paperStyle = {
+ padding: 20, height: '20%', width: 300, margin: '100px auto' 
+};
+  const btnstyle = { margin: '8px 0', display: 'fixed' };
+  const textField = { margin: '15px 5px 5px 0' };
+  const btnstylesocial = {
+ margin: '10px 0', backgroundColor: 'transparent', color: '#FFC107', TextDecoder: 'none' };
+  const signupLink = { margin: '20px 0px 0px 0px' };
 
-  const [open, setOpen] = useState(false)
-  const [errorMessage, setErrorMessage] = useState(null)
+  const [open, setOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleClick = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   const theme = createTheme({
     palette: {
@@ -45,51 +54,51 @@ const Login = () => {
         contrastText: '#fff',
       },
     },
-  })
+  });
   const initialValues = {
-    email: email,
-    password: password,
-  }
+    email,
+    password,
+  };
 
   const validate = () => {
-    let errors = {}
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!email) {
-      errors.email = 'Email is required'
+      errors.email = 'Email is required';
     } else if (!regex.test(email)) {
-      errors.email = 'Please enter a valid email'
+      errors.email = 'Please enter a valid email';
     }
     if (!password) {
-      errors.password = 'Password is required'
+      errors.password = 'Password is required';
     } else if (password.length < 5) {
-      errors.password = 'Password too short'
+      errors.password = 'Password too short';
     }
-    return errors
-  }
+    return errors;
+  };
 
   const handleSubmit = (values, props) => {
     setTimeout(() => {
-      props.resetForm()
-      props.setSubmitting(false)
-    }, 2000)
+      props.resetForm();
+      props.setSubmitting(false);
+    }, 2000);
 
     api
       .post('api/v1/user/login', { email, password })
       .then((res) => {
         if (res.status === 200) {
-          window.location.replace('/')
+          window.location.replace('/');
 
-          const { token } = res.data
+          const { token } = res.data;
 
-          localStorage.setItem('jwt', `${token}`)
+          localStorage.setItem('jwt', `${token}`);
 
-          const dispatch = useDispatch()
+          const dispatch = useDispatch();
 
-          dispatch(setToken(token))
+          dispatch(setToken(token));
         }
       })
-      .catch((err) => setErrorMessage('Wrong email or password!'))
-  }
+      .catch((err) => setErrorMessage('Wrong email or password!'));
+  };
 
   return (
     <Grid>
@@ -168,7 +177,7 @@ const Login = () => {
           startIcon={<GoogleIcon />}
           fullWidth
         >
-          Sign in with Google
+          <a href={process.env.GOOGLE_BACKEND_API_URL}>Sign in with Google</a>
         </Button>
         <Button
           type="submit"
@@ -178,7 +187,7 @@ const Login = () => {
           startIcon={<FacebookIcon />}
           fullWidth
         >
-          Sign in with Facebook
+          <a href={process.env.FACEBOOK_BACKEND_API_URL}>Sign in with Facebook</a>
         </Button>
 
         <Typography style={signupLink}>
@@ -191,7 +200,7 @@ const Login = () => {
         </Typography>
       </Paper>
     </Grid>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
