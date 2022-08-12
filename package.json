@@ -44,6 +44,7 @@
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.5",
+    "sweetalert2": "^11.4.26",
     "yup": "^0.32.11"
   },
   "devDependencies": {
