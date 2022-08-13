@@ -11,6 +11,7 @@ import {
  Formik, Form, Field, ErrorMessage 
 } from 'formik';
 import Snackbar from '@mui/material/Snackbar'
+import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setToken } from '../../redux/features/login'
 import MuiAlert from '@mui/material/Alert'
@@ -24,14 +25,14 @@ const Alert = React.forwardRef((props, ref) => {
 });
 
 const Login = () => {
-  const paperStyle = {
- padding: 20, height: '20%', width: 300, margin: '100px auto' 
-};
-  const btnstyle = { margin: '8px 0', display: 'fixed' };
-  const textField = { margin: '15px 5px 5px 0' };
-  const btnstylesocial = {
- margin: '10px 0', backgroundColor: 'transparent', color: '#FFC107', TextDecoder: 'none' };
-  const signupLink = { margin: '20px 0px 0px 0px' };
+
+  const navigate= useNavigate()
+
+  const paperStyle = {padding: 20, height: '20%', width: 300, margin: '100px auto'}
+  const btnstyle = { margin: '8px 0', display: 'fixed' }
+  const textField = { margin: '15px 5px 5px 0' }
+  const btnstylesocial = { margin: '10px 0', backgroundColor: 'transparent', color: '#FFC107' }
+  const signupLink = { margin: '20px 0px 0px 0px' }
 
   const [open, setOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -88,7 +89,10 @@ const Login = () => {
         if (res.status === 200) {
           window.location.replace('/');
 
-          const { token } = res.data;
+          const { token } = res.data
+          navigate('/')
+
+          window.location.replace('/');
 
           localStorage.setItem('jwt', `${token}`);
 
