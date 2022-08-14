@@ -1,12 +1,16 @@
-const path = require('path')
-const Dotenv = require( 'dotenv-webpack' );
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const Dotenv = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js',
+    publicPath: '/',
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -46,9 +50,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new Dotenv( {
+    new Dotenv({
       path: './.env', // Path to .env file (this is the default)
       systemvars: true,
-    } ),
+    }),
   ],
-}
+};

@@ -1,16 +1,16 @@
-import React, { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/integration/react'
-import App from './App'
-import { persistor, store } from './redux/store'
-import './styles/index.scss'
-import Paper from '@material-ui/core/Paper'
-import { ThemeProvider } from '@material-ui/core/styles'
-import theme from './theme/theme'
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import App from './App';
+import { persistor, store } from './redux/store';
+import './styles/index.scss';
+import Paper from '@material-ui/core/Paper';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './theme/theme';
 
-const container = document.getElementById('app')
-const root = createRoot(container)
+const container = document.getElementById('app');
+const root = createRoot(container);
 root.render(
   <ThemeProvider theme={theme}>
     <StrictMode>
@@ -23,4 +23,4 @@ root.render(
       </Provider>
     </StrictMode>
   </ThemeProvider>
-)
+);
