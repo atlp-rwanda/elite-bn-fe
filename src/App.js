@@ -12,7 +12,6 @@ import { TextField } from '@material-ui/core'
 import AllRoutes from './routes'
 import Nav from './dammyNav'
 import MenuBar from './MenuBar/MenuBar'
-
 function App() {
   return (
     <div>
