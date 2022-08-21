@@ -95,7 +95,7 @@ const Signup = ({ handleChange }) => {
                 as={TextField}
                 id="firstName"
                 name="firstName"
-                label="Enter your First Name"
+                label="Enter your First name"
                 variant="outlined"
                 style={textField}
                 fullWidth
@@ -107,7 +107,7 @@ const Signup = ({ handleChange }) => {
                 as={TextField}
                 id="lastName"
                 name="lastName"
-                label="Enter your Last Name"
+                label="Enter your Last name"
                 variant="outlined"
                 style={textField}
                 fullWidth
@@ -131,7 +131,7 @@ const Signup = ({ handleChange }) => {
                 as={TextField}
                 id="email"
                 name="email"
-                label="Enter your Email"
+                label="Enter your email"
                 variant="outlined"
                 style={textField}
                 fullWidth
@@ -143,7 +143,7 @@ const Signup = ({ handleChange }) => {
                 as={TextField}
                 id="password"
                 name="password"
-                label="Enter your Password"
+                label="Enter your password"
                 variant="outlined"
                 type="password"
                 style={textField}
