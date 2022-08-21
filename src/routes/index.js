@@ -4,6 +4,7 @@ import Login from '../Views/LoginView'
 import HomeView from '../Views/HomeView'
 import CounterView from '../Views/CounterView'
 import ThemeView from '../Views/ThemeView'
+import RegisterView from '../Views/RegisterView'
 
 function AllRoutes() {
   return (
@@ -13,6 +14,7 @@ function AllRoutes() {
         <Route path="login" element={<Login />} />
         <Route path="count" element={<CounterView />} />
         <Route path="theme" element={<ThemeView />} />
+        <Route path="register" element={<RegisterView />} />
       </Routes>
     </div>
   )
