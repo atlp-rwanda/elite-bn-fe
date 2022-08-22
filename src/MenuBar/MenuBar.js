@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -15,8 +16,8 @@ import { Link } from 'react-router-dom'
 
 const pages = [
   {
-    name: "Home",
-    route: "/"
+    name: 'Home',
+    route: '/',
   },
   {
     name: "Services",
@@ -27,7 +28,12 @@ const pages = [
   }, {
     name: "RequestedTrip",
     route: "/tripPage"
-  }]
+  },
+  {
+    name: 'Trips',
+    route: '/trips',
+  },]
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 const ResponsiveAppBar = () => {
