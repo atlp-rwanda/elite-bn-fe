@@ -21,6 +21,9 @@ export default function Nav() {
           <Link to="register">
             <li>Register</li>
           </Link>
+          <link to="request">
+            <li>RequestPage</li>
+          </link>
         </ul>
       </nav>
     </div>
