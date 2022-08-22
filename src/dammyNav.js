@@ -10,20 +10,8 @@ export default function Nav() {
     <div style={{ display: path === '/dashboard' && 'none' }}>
       <nav>
         <ul>
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-          <Link to="count">
-            <li>Counter</li>
-          </Link>
-          <Link to="theme">
-            <li>Themes</li>
-          </Link>
-          <Link to="register">
-            <li>Register</li>
-          </Link>
-          <Logout/>
-          
+        
+
         </ul>
       </nav>
       <Outlet />
