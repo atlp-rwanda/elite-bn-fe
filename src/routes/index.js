@@ -7,6 +7,7 @@ import ThemeView from '../Views/ThemeView'
 import RegisterView from '../Views/RegisterView'
 import DashboardView from '../Views/Dashboard'
 import PrivateRoutes from '../../utils/privateRoute'
+import { ThemeProvider } from '@emotion/react'
 
 function AllRoutes() {
   return (
