@@ -1,21 +1,12 @@
 import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
-import { TextField } from '@material-ui/core'
-import MenuBar from '../MenuBar/MenuBar'
-import Nav from '../dammyNav'
+import Home from '../components/Home/home'
 
 function HomeView() {
   return (
     <div>
-      <MenuBar />
-      <Nav />
-      <h1>Welcome to barefoot</h1>
+
+      <Home />
+
     </div>
   )
 }
