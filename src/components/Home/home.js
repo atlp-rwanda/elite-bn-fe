@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import { TextField } from '@material-ui/core'
 import List from '@mui/material/List';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -75,19 +76,32 @@ onClick={()=>navigate(item.path)}
 
         </Toolbar>
       </AppBar>
-      <Grid container direction="column" alignItems="center" justify="center"  >
+      <Grid container direction="column" alignItems="center" justify="center" className={classes.title} >
+      <Typography color="inherit" align="center" variant="h2" marked="center">
+        Welcome to Barefoot Nomad
+      </Typography>
+      <Typography
+        color="inherit"
+        align="center"
+        variant="h5"
+        sx={{ mb: 4, mt: { sx: 4, sm: 10 } }}
+      >
+       A Whole World On A Single Island
+      </Typography>
+      <Button
+        color="secondary"
+        size="large"
+        variant="contained"
+        component="a"
+        href="/"
+        sx={{ mt: 8 }}
+      >
+        Get started
+      </Button>
+      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
+        Discover the experience
+      </Typography>
 
-      <Typography className={classes.title}
-            variant="h1"
-            sx={{
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'black',
-
-            }}
-          >
-           Welcome to barefoot Normad
-          </Typography>
           </Grid>
           </Paper>
     </div>

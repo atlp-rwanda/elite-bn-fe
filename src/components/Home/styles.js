@@ -1,7 +1,6 @@
 
 import { makeStyles } from '@material-ui/core/styles';
-const Image="https://images.unsplash.com/photo-1494783367193-149034c05e8f?crop=entropy&cs=tinysrgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8c2VhcmNofDEyNnx8dHJpcHxlbnwwfHx8fDE2NjEyNjAwODQ&ixlib=rb-1.2.1&q=80&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450"
-
+const Image="https://images.pexels.com/photos/4577585/pexels-photo-4577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 const useStyles = makeStyles((theme) => ({
 palette:{
   primary:{
@@ -11,20 +10,22 @@ palette:{
 },
        list :{
         display:"flex",
-       },
-       title :{
-       paddingTop:theme.spacing(30)
+        paddingTop:theme.spacing(5),
+        margin: '5px 0'
        },
        paperContainer: {
         backgroundImage: `url(${Image})`,
         backgroundSize: 'cover',
-        backgroundSize: 'cover',
+        minHeight:'100vh',
+        backgroundRepeat:'no-repeat',
         backgroundPosition: 'center',
-        width: `calc(100vw + 48px)`,
         margin: -24,
         padding: 24,
         height: 800,
-    }
+    },
+title:{
+  paddingTop:theme.spacing(10)
+}
 
     }))
 
