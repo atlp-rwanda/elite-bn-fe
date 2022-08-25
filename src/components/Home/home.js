@@ -4,13 +4,15 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import AppBar from '@mui/material/AppBar';
+import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import MenuIcon from '@material-ui/icons/Menu'
 import { TextField } from '@material-ui/core'
+
 import List from '@mui/material/List';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
-
+import {ArrowDownwardOutlined} from '@material-ui/icons';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -35,19 +37,11 @@ function Home() {
     {
      text:'contact us',
      path:'/'
-    },
-    {
-     text:'Login',
-
-     path:'/login'
-    },
-    {
-     text:'Sign Up',
-     path:'/register'
     }
+   
  ]
   return (
-    <div>
+    <div className={classes.root}>
         <Paper className={classes.paperContainer} elevation={0} >
               
            
@@ -58,14 +52,11 @@ function Home() {
 <List className={classes.list} 
 >
     {menuItems.map(item =>(
-<ListItem  key={item.text}
+<ListItem  key={item.text} id="childId"
 onClick={()=>navigate(item.path)}
  className={location.pathname==item.path ? classes.active:null}
 >
   <ListItemText  primaryTypographyProps={{
-                  fontSize: 20,
-                  fontWeight: 'medium',
-
                   noWrap: true,
                   letterSpacing: 0,
                 }} className={classes.list} primary={item.text}/>
@@ -73,6 +64,20 @@ onClick={()=>navigate(item.path)}
    ))}
   </List>
   </Grid>
+  
+   <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+   <List className={classes.list}>
+          <ListItem >
+          <ListItemText onClick={()=>navigate('/login')}primary="login" />
+          </ListItem>
+          <ListItem >
+              <ListItemText  onClick={()=>navigate('/register')} primary="sign up" path="/register" primaryTypographyProps={{
+                  noWrap: true,
+                  letterSpacing: 0,
+                }} />
+          </ListItem>
+        </List>
+          </Box>
 
         </Toolbar>
       </AppBar>
@@ -81,6 +86,7 @@ onClick={()=>navigate(item.path)}
         Welcome to Barefoot Nomad
       </Typography>
       <Typography
+      className={classes.small}
         color="inherit"
         align="center"
         variant="h5"
@@ -98,9 +104,10 @@ onClick={()=>navigate(item.path)}
       >
         Get started
       </Button>
-      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
+      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}  className={classes.inch}>
         Discover the experience
       </Typography>
+      <ArrowDownwardOutlined className={classes.arrow} />
 
           </Grid>
           </Paper>
