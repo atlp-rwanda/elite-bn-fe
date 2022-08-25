@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useRef,useState} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom';
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -8,7 +8,11 @@ import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import MenuIcon from '@material-ui/icons/Menu'
 import { TextField } from '@material-ui/core'
+import {
 
+  CssBaseline
+ 
+} from "@material-ui/core";
 import List from '@mui/material/List';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
@@ -20,10 +24,27 @@ import ListItemText from '@mui/material/ListItemText';
 import useStyles from './styles'
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/system';
+import Service from './service'
 function Home() {
+
+const section=useRef(null)
+const goToSection = () => window.scrollTo({top:section.current.offsetTop,behavior:"smooth"})
   const classes=useStyles()
   let navigate = useNavigate()
   const location=useLocation()
+  const handleClick=() =>{
+const [scrollDown,setScrollDown]=useState(false)
+useEffect(()=>{
+  window.addEventListener("scroll",()=>{
+    if(window.scrollY>100){
+      setScrollDown(true)
+    }
+    else{
+      setScrollDown(false)
+    }
+  })
+},[])
+  }
   const menuItems=[
     {
      text:'Home',
@@ -44,7 +65,6 @@ function Home() {
     <div className={classes.root}>
         <Paper className={classes.paperContainer} elevation={0} >
               
-           
       <AppBar position ="static"elevation={0} style={{background: 'transparent', boxShadow: 'none'}} >
       
         <Toolbar >
@@ -107,10 +127,15 @@ onClick={()=>navigate(item.path)}
       <Typography variant="body2" color="inherit" sx={{ mt: 2 }}  className={classes.inch}>
         Discover the experience
       </Typography>
-      <ArrowDownwardOutlined className={classes.arrow} />
+      <ArrowDownwardOutlined className={classes.arrow} onClick={goToSection} />
 
           </Grid>
           </Paper>
+
+          <div ref={section} >
+            
+            <Service />
+          </div>
     </div>
   )
 }

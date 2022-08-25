@@ -15,17 +15,20 @@ palette:{
        paperContainer: {
         backgroundImage: `url(${Image})`,
         backgroundSize: 'cover',
-        minHeight:'100vh',
         backgroundRepeat:'no-repeat',
-        backgroundPosition: 'center',
-        margin: -24,
-        padding: 24,
+     
         height: 800,
+    },
+    paper:{
+      backgroundImage: `url(${Image})`,
     },
 title:{
   paddingTop:theme.spacing(10),
   fontFamily:'Roboto',
   color:'#fff'
+},
+card:{
+  display:'flex'
 },
 small:{
   paddingTop:30,
@@ -34,6 +37,13 @@ small:{
 inch:{
   paddingTop:30,
   fontFamily:'Roboto'
+},
+service:{
+  paddingTop:20,
+ fontSize:35,
+  fontFamily:'Roboto',
+  color:'#FAB33F',
+  fontWeight:700
 },
 arrow:{
   paddingTop:20,
@@ -46,7 +56,10 @@ root:{
   }
 },
 
+serviceRoot:{
 
+  backgroundColor:'#D9D9D9'
+}
 
     }))
 
