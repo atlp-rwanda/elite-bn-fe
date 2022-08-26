@@ -29,46 +29,43 @@ function Service() {
     <Typography color="inherit" align="center" variant="h2" marked="center" className={classes.service}>
     Our Destination
     </Typography>
-    <Typography
-      className={classes.small}
-        color="inherit"
-        variant="h5"
-        sx={{ mb: 4, mt: { sx: 4, sm: 10 } }}
-      >
-      </Typography>
+    <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
      
-<Grid container spacing={3}>
-<Card sx={{ maxWidth: 345 }} style={{display: 'inline-block', height:"567"
-       , width:"1197"}}>
+     <div className={classes.carding}>
+
+  
+     <Card sx={{ maxWidth: 345 }} style={{display: 'inline-block', height:"567"
+       , width:"1197"}} className={classes.cardOfFrance}>
       <CardMedia
         component="img"
        
-        image="https://media.istockphoto.com/photos/silverback-gorillas-picture-id1091885206?b=1&k=20&m=1091885206&s=612x612&w=0&h=CPF3kYbW2zSGP4ZYVH8pg2VgcPwLrP-Xx7VP4fbi7qI="
+        image="https://images.pexels.com/photos/1530259/pexels-photo-1530259.jpeg?auto=compress&cs=tinysrgb&w=600"
         alt="green iguana"
       />
-    
     </Card>
-    <Card sx={{ maxWidth: 345 }} style={{display: 'inline-block', height:"567"
-       , width:"1197"}}>
+
+    <Card sx={{ maxWidth: 345 }} 
+      >
       <CardMedia
         component="img"
        
-        image="https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image="https://images.pexels.com/photos/2867769/pexels-photo-2867769.jpeg?auto=compress&cs=tinysrgb&w=600"
         alt="green iguana"
       />
-    
     </Card>
-    <Card sx={{ maxWidth: 345 }} style={{display: 'inline-block', height:"567"
-       , width:"1197"}}>
+    <Card sx={{ maxWidth: 345 }} className={classes.cardOfDubai}
+      >
       <CardMedia
         component="img"
        
-        image="https://images.pexels.com/photos/3071144/pexels-photo-3071144.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image="https://images.pexels.com/photos/3032330/pexels-photo-3032330.jpeg?auto=compress&cs=tinysrgb&w=600"
         alt="green iguana"
       />
     </Card>
-</Grid>
-    
+    </div>  
     </div>
   )
 }
