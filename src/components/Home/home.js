@@ -67,7 +67,7 @@ useEffect(()=>{
   return (
     <div className={classes.root}>
         <Paper className={classes.paperContainer} elevation={0} >
-        <Navbar/>
+        <Navbar />
       <Grid container direction="column" alignItems="center" justify="center" className={classes.title} >
       <Typography color="inherit" align="center" variant="h2" marked="center">
         Welcome to Barefoot Nomad

@@ -9,7 +9,9 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import {useLocation, useNavigate} from 'react-router-dom';
 import DrawerComponent from "./Drawer";
+import Service from './service'
 const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginLeft: theme.spacing(5),
@@ -32,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navbar() {
+  let navigate = useNavigate()
+  const location=useLocation()
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -47,11 +51,8 @@ function Navbar() {
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <Link to="/" className={classes.link} >
+            <Link to="/" className={classes.link}  onClick={() => window.location.replace("/#about")}>
              services
-            </Link>
-            <Link to="/" className={classes.link}>
-              Contact us
             </Link>
             <Link to="/login" className={classes.link}>
               Login

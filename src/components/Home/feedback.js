@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Grid from '@material-ui/core/Grid'
 import useStyles from './styles'
 import Box from '@mui/material/Box';
 import StarRateIcon from '@mui/icons-material/StarRate';
@@ -14,6 +15,7 @@ export default function Feedback() {
     const classes=useStyles()
   return (
     <div className={classes.feedbackContainer}>
+      <Grid container direction="column" alignItems="center" justify="center" ></Grid>
     <Typography variant="h2" marked="center" className={classes.feedbackTypo}>   FeedBack for clients </Typography>
     <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -73,7 +75,9 @@ export default function Feedback() {
 
   </CardContent>
 </Card>
+
     </div>
+   
     </div>
   );
 }

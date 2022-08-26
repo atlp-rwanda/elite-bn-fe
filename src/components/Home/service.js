@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid'
 function Service() {
     const classes=useStyles()
   return (
-    <div className={classes.serviceRoot}>
+    <div className={classes.serviceRoot} id={"about"}>
     <Typography color="inherit" align="center" variant="h2" marked="center" className={classes.service}>
     Our Services
     </Typography>
