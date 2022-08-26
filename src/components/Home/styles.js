@@ -54,6 +54,9 @@ inch:{
   paddingTop:30,
   fontFamily:'Roboto'
 },
+footerRoot:{
+  minHeight:'100vh'
+},
 feedbackTypo:{
   paddingTop:40,
    fontFamily:'Roboto',
@@ -108,9 +111,16 @@ eliab:{
   paddingTop:theme.spacing(3),
   paddingLeft:theme.spacing(3)
 },
+boxFooter:{
+  paddingTop:theme.spacing(3)
+},
 content:{
 display:'flex',
 
+},
+footerTitle:{
+  color: "#FAB33F",
+  fontSize: "35px",
 },
 card1:{
   margin:"100px"
@@ -128,6 +138,20 @@ serviceRoot:{
 icons:{
  marginLeft:theme.spacing(2),
  color:'#FAB33F'
+},
+link: {
+  textDecoration: "none",
+  color: "white",
+  "&:hover": {
+    color: '#FAB33F',
+    borderBottom: "1px solid white",
+  },
+},
+box:{
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, 220px)", //the width of the card 
+  justifyContent: "center",
+  gridGap: "20px",
 }
 
     }))
