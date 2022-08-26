@@ -15,8 +15,7 @@ const Signup = ({ handleChange }) => {
   const paperStyle = {
     padding: 20,
     height: '20%',
-    width: 480,
-    margin: '80px auto',
+    width: 320,
   }
   const btnstyle = { margin: '8px 0', display: 'fixed' }
   const textField = { margin: '4px 0' }
@@ -55,15 +54,26 @@ const Signup = ({ handleChange }) => {
   const handleClick = () => {
     setOpen(true)
   }
+  const handleClose = () => {
+    setOpen(false)
+  }
   const handleSubmit = (values, props) => {
-    props.setSubmitting(false)
+    setTimeout(() => {
+      props.resetForm()
+      props.setSubmitting(false)
+    }, 2000)
     api
       .post('api/v1/user/register', values)
-      .then((res) => {
-        if (res.status === 201) {
+      .then((response) => {
+        if (response.status === 200) {
           window.location.replace('/')
+          const { token } = response.data
+
+          localStorage.setItem('jwt', `${token}`)
+
           const dispatch = useDispatch()
-          dispatch(setToken(res.data.accessToken))
+
+          dispatch(setToken(token))
         }
       })
       .catch((err) => {
@@ -72,11 +82,18 @@ const Signup = ({ handleChange }) => {
   }
 
   return (
-    <Grid>
+    <Grid
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      style={{ minHeight: '90vh' }}
+    >
       <div>
         {open && (
-          <Snackbar open={errorMessage} autoHideDuration={500}>
-            <Alert severity="error" sx={{ width: '100%' }}>
+          <Snackbar open={errorMessage} autoHideDuration={6000} onClose={handleClose}>
+            <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
               {errorMessage}
             </Alert>
           </Snackbar>

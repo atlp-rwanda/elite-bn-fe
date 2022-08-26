@@ -17,9 +17,6 @@ export default function Nav() {
           <Link to="theme">
             <li>Themes</li>
           </Link>
-          <Link to="register">
-            <li>Register</li>
-          </Link>
         </ul>
       </nav>
       <Outlet />

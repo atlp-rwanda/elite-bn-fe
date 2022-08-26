@@ -1,5 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit';
-import storage from 'redux-persist/lib/storage';
+import { configureStore } from '@reduxjs/toolkit'
+import storage from 'redux-persist/lib/storage'
 import {
   persistReducer,
   persistStore,
@@ -13,16 +13,16 @@ import {
 import logger from 'redux-logger'
 import counterReducer from './counter'
 import authRegistration from './features/registerReducer'
-import authLogin from './features/login';
+import authLogin from './features/login'
 
 const persistConfig = {
   key: 'root',
   storage,
-};
+}
 
 const persistedReducer = persistReducer(persistConfig, counterReducer)
 const persistRegister = persistReducer(persistConfig, authRegistration)
-const persistLogin = persistReducer(persistConfig, authLogin);
+const persistLogin = persistReducer(persistConfig, authLogin)
 
 export const store = configureStore({
   reducer: {
@@ -43,6 +43,6 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-});
+})
 
-export const persistor = persistStore(store);
+export const persistor = persistStore(store)
