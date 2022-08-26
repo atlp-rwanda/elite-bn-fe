@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import DrawerComponent from "./Drawer";
-
 const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginLeft: theme.spacing(5),
@@ -48,7 +47,7 @@ function Navbar() {
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <Link to="/" className={classes.link}>
+            <Link to="/" className={classes.link} onClick={goToSection}>
              services
             </Link>
             <Link to="/" className={classes.link}>

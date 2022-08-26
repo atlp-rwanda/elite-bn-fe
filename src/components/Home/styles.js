@@ -12,6 +12,24 @@ palette:{
         display:"flex",
       
        },
+       navlinks: {
+        marginLeft: theme.spacing(5),
+        display: "flex",
+      },
+      logo: {
+        flexGrow: "1",
+        cursor: "pointer",
+      },
+      link: {
+        textDecoration: "none",
+        color: "white",
+        fontSize: "20px",
+        marginLeft: theme.spacing(20),
+        "&:hover": {
+          color: '#FAB33F',
+          borderBottom: "1px solid white",
+        },
+      },
        paperContainer: {
         backgroundImage: `url(${Image})`,
         backgroundSize: 'cover',
@@ -90,7 +108,7 @@ service:{
 
 arrow:{
   paddingTop:20,
-  fontSize:50,
+  fontSize:100,
   color:'#FAB33F'
 },
 root:{
