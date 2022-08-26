@@ -10,6 +10,8 @@ import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
+import { BrowserRouter as Router, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const pages = ['Home', 'Services', 'Contact Us']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
@@ -17,6 +19,8 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const [anchorElUser, setAnchorElUser] = React.useState(null)
+  const location = useLocation()
+  const path = location.pathname
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
@@ -34,7 +38,7 @@ const ResponsiveAppBar = () => {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ display: path === '/dashboardLayout' && 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -144,7 +148,14 @@ const ResponsiveAppBar = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center">
+                    <Link
+                      to={setting.toLowerCase()}
+                      style={{ textDecoration: 'none', color: 'black' }}
+                    >
+                      {setting}
+                    </Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
