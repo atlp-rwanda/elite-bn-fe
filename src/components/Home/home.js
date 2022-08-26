@@ -25,6 +25,8 @@ import useStyles from './styles'
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/system';
 import Service from './service'
+import Feedback from './feedback'
+import Navbar from './navbar'
 function Home() {
 
 const section=useRef(null)
@@ -64,43 +66,7 @@ useEffect(()=>{
   return (
     <div className={classes.root}>
         <Paper className={classes.paperContainer} elevation={0} >
-              
-      <AppBar position ="static"elevation={0} style={{background: 'transparent', boxShadow: 'none'}} >
-      
-        <Toolbar >
-        <Grid container direction="column" alignItems="center" justify="center">
-<List className={classes.list} 
->
-    {menuItems.map(item =>(
-<ListItem  key={item.text} id="childId"
-onClick={()=>navigate(item.path)}
- className={location.pathname==item.path ? classes.active:null}
->
-  <ListItemText  primaryTypographyProps={{
-                  noWrap: true,
-                  letterSpacing: 0,
-                }} className={classes.list} primary={item.text}/>
-</ListItem>
-   ))}
-  </List>
-  </Grid>
-  
-   <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
-   <List className={classes.list}>
-          <ListItem >
-          <ListItemText onClick={()=>navigate('/login')}primary="login" />
-          </ListItem>
-          <ListItem >
-              <ListItemText  onClick={()=>navigate('/register')} primary="sign up" path="/register" primaryTypographyProps={{
-                  noWrap: true,
-                  letterSpacing: 0,
-                }} />
-          </ListItem>
-        </List>
-          </Box>
-
-        </Toolbar>
-      </AppBar>
+        <Navbar/>
       <Grid container direction="column" alignItems="center" justify="center" className={classes.title} >
       <Typography color="inherit" align="center" variant="h2" marked="center">
         Welcome to Barefoot Nomad
@@ -115,6 +81,11 @@ onClick={()=>navigate(item.path)}
        A Whole World On A Single Island
       </Typography>
       <Button
+      style={{
+     
+        backgroundColor: "#FAB33F",
+       
+    }}
         color="secondary"
         size="large"
         variant="contained"
@@ -135,6 +106,7 @@ onClick={()=>navigate(item.path)}
           <div ref={section} >
             
             <Service />
+            <Feedback />
           </div>
     </div>
   )
