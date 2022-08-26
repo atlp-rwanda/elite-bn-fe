@@ -4,17 +4,11 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import AppBar from '@mui/material/AppBar';
+import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import MenuIcon from '@material-ui/icons/Menu'
 import { TextField } from '@material-ui/core'
 import Footer from './footer'
-import {
-  
-  useTheme,
-  useMediaQuery,
-} from "@material-ui/core";
-import { Link } from "react-router-dom";
-import DrawerComponent from "./Drawer";
 import {
 
   CssBaseline
@@ -34,10 +28,8 @@ import { styled } from '@mui/system';
 import Service from './service'
 import Feedback from './feedback'
 import Navbar from './navbar'
-
 function Home() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
 const section=useRef(null)
 const goToSection = () => window.scrollTo({top:section.current.offsetTop,behavior:"smooth"})
   const classes=useStyles()
@@ -75,29 +67,7 @@ useEffect(()=>{
   return (
     <div className={classes.root}>
         <Paper className={classes.paperContainer} elevation={0} >
-        <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
-      <CssBaseline />
-      <Toolbar>
-        {isMobile ? (
-          <DrawerComponent />
-        ) : (
-          <div className={classes.navlinks}>
-            <Link to="/" className={classes.link}>
-              Home
-            </Link>
-            <Link to="/" className={classes.link} onClick={goToSection}>
-             services
-            </Link>
-            <Link to="/login" className={classes.link}>
-              Login
-            </Link>
-            <Link to="/register" className={classes.link}>
-              Register
-            </Link>
-          </div>
-        )}
-      </Toolbar>
-    </AppBar>
+        <Navbar/>
       <Grid container direction="column" alignItems="center" justify="center" className={classes.title} >
       <Typography color="inherit" align="center" variant="h2" marked="center">
         Welcome to Barefoot Nomad
@@ -136,7 +106,7 @@ useEffect(()=>{
 
           <div ref={section} >
             
-            <Service ref={section}  />
+            <Service />
             <Feedback />
             <Footer />
           </div>
