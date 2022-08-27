@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, Outlet } from 'react-router-dom'
 
 export default function Nav() {
   const location = useLocation()
@@ -8,9 +8,6 @@ export default function Nav() {
     <div style={{ display: path === '/dashboard' && 'none' }}>
       <nav>
         <ul>
-          <Link to="login">
-            <li>Login</li>
-          </Link>
           <Link to="/">
             <li>Home</li>
           </Link>
@@ -25,6 +22,7 @@ export default function Nav() {
           </Link>
         </ul>
       </nav>
+      <Outlet />
     </div>
   )
 }

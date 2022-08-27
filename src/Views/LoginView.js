@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Login from '../components/Authentications/login'
 
 function LoginView() {
+  const navigate = useNavigate();
+   useEffect(()=>{
+    const isLoggedIn= localStorage.getItem("jwt");
+isLoggedIn ? navigate('/') :'';
+
+},[])
+
   return (
     <div>
-      <h1>Login to barefoot</h1>
+      <Login />
     </div>
   )
 }
