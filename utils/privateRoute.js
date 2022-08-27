@@ -3,8 +3,6 @@ import React from 'react'
 import jwt_decode from 'jwt-decode'
 import Nav from '../src/dammyNav';
 import { useDispatch, useSelector } from 'react-redux';
-import {authActions} from '../src/redux/features/login'
-
 
 const PrivateRoutes = () => {
     const dispatch = useDispatch();
@@ -22,11 +20,7 @@ const PrivateRoutes = () => {
         let decodedToken = jwt_decode(isLoggedIn);
         
         if(decodedToken.exp * 1000 > currentDate.getTime()){
-            // dispatch(authActions.login({
-            //     isLoggedIn:true,
-            // }))
-            // const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
-            // console.log('is loggedin', isLoggedIn)
+
             return  <Nav/>
         }
       }else{
