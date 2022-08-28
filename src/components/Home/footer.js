@@ -6,12 +6,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Grid from '@material-ui/core/Grid'
+import InstagramIcon from '@mui/icons-material/Instagram';
 import Typography from '@mui/material/Typography';
 import useStyles from './styles'
 import Box from '@mui/material/Box';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import {StarBorderOutlined} from '@material-ui/icons';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Container from '@mui/material/Container';
 import RoomIcon from '@material-ui/icons/Room';
 import { Link } from "react-router-dom";
@@ -70,7 +73,10 @@ Join us on :
 </Typography>
 </Box>
 <Box>
-<YouTubeIcon  sx={{color:'red',fontSize:70}}/><br />
+<YouTubeIcon/><br />
+<InstagramIcon /><br />
+<LinkedInIcon /><br />
+<TwitterIcon />
 </Box>
 </Grid>
 </Grid>

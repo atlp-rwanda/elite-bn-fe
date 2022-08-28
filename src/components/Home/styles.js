@@ -152,6 +152,19 @@ box:{
   gridTemplateColumns: "repeat(auto-fill, 220px)", //the width of the card 
   justifyContent: "center",
   gridGap: "20px",
+},
+rootDestination:{
+  minHeight:'100vh',
+  display:"flex",
+  justifyContent:"center",
+  alignItems:"center",
+
+},
+titleCards:{
+  fontSize:'0.1rem',
+  fontFamily:'Roboto',
+  fontWeight:'bold',
+
 }
 
     }))
