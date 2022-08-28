@@ -11,6 +11,7 @@ import Snackbar from '@mui/material/Snackbar'
 import { useDispatch } from 'react-redux'
 import { setToken } from '../../redux/features/login'
 import MuiAlert from '@mui/material/Alert'
+import {useNavigate} from 'react-router-dom'
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -23,6 +24,9 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 
 
 const Login = () => {
+
+  const navigate= useNavigate()
+
   const paperStyle = {padding: 20, height: '20%', width: 300, margin: '100px auto'}
   const btnstyle = { margin: '8px 0', display: 'fixed' }
   const textField = { margin: '15px 5px 5px 0' }
@@ -85,7 +89,9 @@ const Login = () => {
 
         if (res.status === 200) {
 
-          window.location.replace('/');
+          navigate('/')
+
+          // window.location.replace('/');
 
           const { token } = res.data;
           

@@ -7,11 +7,13 @@ import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import { TextField } from '@material-ui/core'
+import Chat from '../components/chat/chat'
 
 function HomeView() {
   return (
-    <div>
+    <div style={{height: '100vh'}}>
       <h1>Welcome to barefoot</h1>
+      <Chat/>
     </div>
   )
 }
