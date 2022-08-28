@@ -16,11 +16,11 @@ export default function Feedback() {
   return (
     <div className={classes.feedbackContainer}>
       <Grid container direction="column" alignItems="center" justify="center" ></Grid>
-    <Typography variant="h2" marked="center" className={classes.feedbackTypo}>   FeedBack for clients </Typography>
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="h4" align="center" marked="center" className={classes.feedbackTypo}> FeedBack for clients </Typography>
+    {/* <Typography variant="body2" color="text.secondary" paragraph>
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
-        </Typography>
+        </Typography> */}
     <div className={classes.FeedbackRoot}>
 
     <Card sx={{ maxWidth: 345 }} className={classes.card1} >
