@@ -15,14 +15,16 @@ export default function Feedback() {
     const classes=useStyles()
   return (
     <div className={classes.feedbackContainer}>
-      <Grid container direction="column" alignItems="center" justify="center" ></Grid>
+      <Grid container direction="column" alignItems="center" justify="center" >
     <Typography variant="h4" align="center" marked="center" className={classes.feedbackTypo}> FeedBack for clients </Typography>
+    </Grid>
     {/* <Typography variant="body2" color="text.secondary" paragraph>
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
         </Typography> */}
     <div className={classes.FeedbackRoot}>
-
+    <Grid container direction="row" alignItems="center" justify="center" >
+      <Grid item>
     <Card sx={{ maxWidth: 345 }} className={classes.card1} >
   
       <CardContent  className={classes.content}sx={{display: 'flex' }}>
@@ -49,6 +51,8 @@ export default function Feedback() {
     
       </CardContent>
     </Card>
+    </Grid>
+  
     <Card sx={{ maxWidth: 345 }} >
   
   <CardContent  className={classes.content}sx={{display: 'flex' }}>
@@ -72,12 +76,11 @@ export default function Feedback() {
       Lizards are a widespread group of squamate reptiles, with over 6,000
       species, ranging across all continents except Antarctica
     </Typography>
-
   </CardContent>
 </Card>
-
+</Grid>
     </div>
-   
+
     </div>
   );
 }

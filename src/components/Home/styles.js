@@ -26,6 +26,7 @@ palette:{
       display: 'flex',
       justifyContent:'center',
       alignItems:"center",
+     
       
      
     },
@@ -35,12 +36,19 @@ palette:{
       alignItems:"center",
     },
     feedbackContainer:{
-      backgroundColor:'#D9D9D9'
+      backgroundColor:'#D9D9D9',
+      [theme.breakpoints.down('xs')]: {
+      
+      },
+
     },
 title:{
   paddingTop:theme.spacing(10),
   fontFamily:'Roboto',
-  color:'#fff'
+  color:'#fff',
+  // [theme.breakpoints.up('xs')]: {
+  //   width:200
+  // },
 },
 card:{
   display:'flex',
@@ -109,7 +117,7 @@ avatar:{
 },
 eliab:{
   paddingTop:theme.spacing(3),
-  paddingLeft:theme.spacing(3)
+  paddingLeft:theme.spacing(3),
 },
 boxFooter:{
   paddingTop:theme.spacing(3)
