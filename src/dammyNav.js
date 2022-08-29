@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <div style={{ display: path === '/dashboard' && 'none' }}>
       <nav>
-        <ul>
+        {/* <ul>
           <Link to="/">
             <li>Home</li>
           </Link>
@@ -20,7 +20,7 @@ export default function Nav() {
           <Link to="register">
             <li>Register</li>
           </Link>
-        </ul>
+        </ul> */}
       </nav>
       <Outlet />
     </div>
