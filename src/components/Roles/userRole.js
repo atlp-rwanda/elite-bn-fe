@@ -23,7 +23,12 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import rows from "./rowData";
+import {
+  getProfileData,
+  updateProfileData,
+  thisUser,
+} from '../../redux/features/roleReducer';
+// import rows from "./rowData";
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
@@ -109,7 +114,8 @@ export default function FormDialog() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(({ id, firstName, lastName, Username, email, Role }) => (
+          {map(({ id, firstName, lastName, Username, email, Role }) => (
+            {/* {rows.map(({ id, firstName, lastName, Username, email, Role }) => ( */}
             <TableRow key={id}>
               <TableCell component="th" scope="row">
                 {firstName}
