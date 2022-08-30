@@ -12,11 +12,7 @@ export default function Destination() {
  <Typography color="inherit" align="center" variant="h2" marked="center" className={classes.service}>
     Our Destination
     </Typography>
-    <Typography variant="body2" align="center" color="text.secondary" paragraph>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+    <Typography variant="body2" align="center" justify='center' color="text.secondary" paragraph>
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
         </Typography>

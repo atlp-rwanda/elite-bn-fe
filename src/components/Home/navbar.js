@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import {useLocation, useNavigate} from 'react-router-dom';
 import DrawerComponent from "./Drawer";
 import Service from './service'
+import { Box } from "@mui/material";
 const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginLeft: theme.spacing(5),
@@ -22,9 +23,11 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   link: {
+    align: 'center',
     textDecoration: "none",
     color: "white",
     fontSize: "20px",
+    textAlign: 'right',
     marginLeft: theme.spacing(20),
     "&:hover": {
       color: '#FAB33F',
@@ -41,26 +44,26 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
+    <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
       <CssBaseline />
       <Toolbar>
         {isMobile ? (
           <DrawerComponent />
         ) : (
-          <div className={classes.navlinks}>
+          <Box align='center' > 
+          <div className={classes.navlinks} >
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <Link to="/" className={classes.link}  onClick={() => window.location.replace("/#about")}>
+            <Link to="/" className={classes.link} onClick={() => window.location.replace("/#about")}>
              services
             </Link>
-            <Link to="/login" className={classes.link}>
-              Login
-            </Link>
-            <Link to="/register" className={classes.link}>
-              Register
+            <Link to="/logout" className={classes.link}>
+              Log out
             </Link>
           </div>
+          </Box>
+
         )}
       </Toolbar>
     </AppBar>
