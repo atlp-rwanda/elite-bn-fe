@@ -27,6 +27,10 @@ import NotificationsIcon from '@mui/icons-material/Notifications'
 import MoreIcon from '@mui/icons-material/MoreVert'
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded'
 import ConnectingAirportsRoundedIcon from '@mui/icons-material/ConnectingAirportsRounded'
+import { BrowserRouter as Router, useLocation } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
+
+
 
 const drawerWidth = 240
 const Search = styled('div')(({ theme }) => ({
@@ -71,6 +75,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Dboard(props) {
   const { window } = props
   const [mobileOpen, setMobileOpen] = React.useState(false)
+  const location = useLocation()
+  const path = location.pathname
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
@@ -139,7 +145,7 @@ function Dboard(props) {
     >
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
       <MenuItem onClick={handleMenuClose}>Help</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Log out</MenuItem>
+      <MenuItem onClick={handleMenuClose}> <Link textDecoration='none' underline="none" color='black' to="/logout"> Log out</Link></MenuItem>
     </Menu>
   )
 
@@ -200,7 +206,7 @@ function Dboard(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-        }}
+        }} style={{ display: path === '/auth.logout' && 'none' }}
       >
         <Toolbar>
           <IconButton

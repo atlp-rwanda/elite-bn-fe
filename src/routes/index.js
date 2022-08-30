@@ -26,13 +26,13 @@ function AllRoutes() {
           <Route path="dashboard" element={<DashboardView />} />
           <Route path="requests" element={<RequestView/>} />
         </Route>
-
-        <Route path="login" element={<Login />} />
         <Route path="register" element={<RegisterView />} />
+        <Route path="login" element={<Login />} />
         <Route exact path="/" element={<HomeView />} />
         <Route exact path="logout" element={<Logout/>} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
+        
       </Routes>
     </div>
   )

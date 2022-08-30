@@ -7,7 +7,7 @@ export default function Nav() {
   const location = useLocation()
   const path = location.pathname
   return (
-    <div style={{ display: path === '/dashboard' && 'none' }}>
+    <div style={{ display: path === '/DashboardLayout' && 'none' }}>
       <nav>
         <ul>
         

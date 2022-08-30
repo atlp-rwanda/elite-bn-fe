@@ -37,8 +37,6 @@ const PrivateRoutes = () => {
       if (decodedToken.exp * 1000 > currentDate.getTime()) {
         return <Nav />
       }
-    } else {
-      return <Navigate to="/login" />
     }
   } else {
     return <Navigate to="/login" />

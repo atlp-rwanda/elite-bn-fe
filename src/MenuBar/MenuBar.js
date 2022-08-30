@@ -52,7 +52,7 @@ const ResponsiveAppBar = () => {
   }
 
   return (
-    <AppBar position="static" style={{ display: path === '/dashboardLayout' && 'none' }}>
+    <AppBar position="static" style={{ display: path === '/DashboardLayout' && 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -66,11 +66,11 @@ const ResponsiveAppBar = () => {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'orange',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BN
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -121,11 +121,11 @@ const ResponsiveAppBar = () => {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'orange',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BN
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -150,7 +150,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="" />
               </IconButton>
             </Tooltip>
             <Menu
