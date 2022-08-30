@@ -46,11 +46,11 @@ describe('Auth reducers', () => {
 
 describe('it should test the axios', () => {
   test('testing api call', () => {
-    const sampleObj = { Message: 'User created' }
-    api.post('api/v1/user/register').then((res) => {
-      if (res.status === 201) {
+    const sampleObj = { Message: 'User logged in successfully' }
+    api.post('api/v1/user/register').then((response) => {
+      if (response.status === 200) {
         window.location.replace('/')
-        expect(res.data.Message).toMatchObject(sampleObj)
+        expect(response.data.Message).toMatchObject(sampleObj)
       }
     })
   })

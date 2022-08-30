@@ -11,19 +11,14 @@ import Snackbar from '@mui/material/Snackbar'
 import { useDispatch } from 'react-redux'
 import { setToken } from '../../redux/features/login'
 import MuiAlert from '@mui/material/Alert'
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/icon?family=Material+Icons"
-/>
-
+;<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
 const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
-
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
+})
 
 const Login = () => {
-  const paperStyle = {padding: 20, height: '20%', width: 300, margin: '100px auto'}
+  const paperStyle = { padding: 20, height: '20%', width: 300, margin: '100px auto' }
   const btnstyle = { margin: '8px 0', display: 'fixed' }
   const textField = { margin: '15px 5px 5px 0' }
   const btnstylesocial = { margin: '10px 0', backgroundColor: 'transparent', color: '#FFC107' }
@@ -32,18 +27,16 @@ const Login = () => {
   const [open, setOpen] = useState(false)
   const [errorMessage, setErrorMessage] = useState(null)
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleClick = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
-
+    setOpen(false)
+  }
 
   const theme = createTheme({
     palette: {
@@ -59,20 +52,20 @@ const Login = () => {
   }
 
   const validate = () => {
-    let errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    let errors = {}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!email) {
-      errors.email = "Email is required";
+      errors.email = 'Email is required'
     } else if (!regex.test(email)) {
-      errors.email = "Please enter a valid email";
+      errors.email = 'Please enter a valid email'
     }
     if (!password) {
-      errors.password = "Password is required";
+      errors.password = 'Password is required'
     } else if (password.length < 5) {
-      errors.password = "Password too short";
+      errors.password = 'Password too short'
     }
-    return errors;
-  };
+    return errors
+  }
 
   const handleSubmit = (values, props) => {
     setTimeout(() => {
@@ -80,49 +73,42 @@ const Login = () => {
       props.setSubmitting(false)
     }, 2000)
 
-    api.post('api/v1/user/login', {email,password})
+    api
+      .post('api/v1/user/login', { email, password })
       .then((res) => {
-
         if (res.status === 200) {
+          window.location.replace('/')
 
-          window.location.replace('/');
+          const { token } = res.data
 
-          const { token } = res.data;
-          
-          localStorage.setItem("jwt", `${token}`);
+          localStorage.setItem('jwt', `${token}`)
 
-          const dispatch = useDispatch();
+          const dispatch = useDispatch()
 
-          dispatch(setToken(token));
-
-        } 
-      }).catch(err =>
-        setErrorMessage('Wrong email or password!')
-      )
+          dispatch(setToken(token))
+        }
+      })
+      .catch((err) => setErrorMessage('Wrong email or password!'))
   }
 
-
   return (
-
     <Grid>
-       <div>
-        {open && <Snackbar open={errorMessage} autoHideDuration={6000} onClose={handleClose} >
-          <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }} >
-            {errorMessage}
-          </Alert>
-        </Snackbar>}
+      <div>
+        {open && (
+          <Snackbar open={errorMessage} autoHideDuration={6000} onClose={handleClose}>
+            <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+              {errorMessage}
+            </Alert>
+          </Snackbar>
+        )}
       </div>
 
       <Paper elevation={5} style={paperStyle}>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={handleSubmit}
-          validate={validate}
-        >
+        <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validate}>
           {(props) => (
-            <Form >
-
-              <Field as={TextField}
+            <Form>
+              <Field
+                as={TextField}
                 id="email"
                 name="email"
                 label="Enter your email"
@@ -130,13 +116,13 @@ const Login = () => {
                 style={textField}
                 data-testid="emailid"
                 value={email}
-                onChange= {(e)=> setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 fullWidth
                 error={props.errors.email && props.touched.email}
                 helperText={<ErrorMessage data-testid="emailError" name="email" />}
-                
               />
-              <Field as={TextField}
+              <Field
+                as={TextField}
                 id="password"
                 name="password"
                 label="Enter your password"
@@ -144,7 +130,7 @@ const Login = () => {
                 type="password"
                 style={textField}
                 value={password}
-                onChange= {(e)=> setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
                 fullWidth
                 error={props.errors.password && props.touched.password}
                 helperText={<ErrorMessage data-testid="pswd" name="password" />}
@@ -159,12 +145,10 @@ const Login = () => {
                   data-testid="Sign in"
                   fullWidth
                   disabled={props.isSubmitting}
-
                   onClick={handleClick}
                 >
                   {props.isSubmitting ? 'Loading' : 'Sign In'}
                 </Button>
-
               </ThemeProvider>
             </Form>
           )}
@@ -176,8 +160,26 @@ const Login = () => {
           </Link>
         </Typography>
 
-        <Button type='submit' color='primary' variant="contained" style={btnstylesocial} startIcon={<GoogleIcon />} fullWidth>Sign in with Google</Button>
-        <Button type='submit' color='primary' variant="contained" style={btnstylesocial} startIcon={<FacebookIcon />} fullWidth>Sign in with Facebook</Button>
+        <Button
+          type="submit"
+          color="primary"
+          variant="contained"
+          style={btnstylesocial}
+          startIcon={<GoogleIcon />}
+          fullWidth
+        >
+          Sign in with Google
+        </Button>
+        <Button
+          type="submit"
+          color="primary"
+          variant="contained"
+          style={btnstylesocial}
+          startIcon={<FacebookIcon />}
+          fullWidth
+        >
+          Sign in with Facebook
+        </Button>
 
         <Typography style={signupLink}>
           {' '}
@@ -187,16 +189,9 @@ const Login = () => {
             Sign Up{' '}
           </Link>
         </Typography>
-
       </Paper>
     </Grid>
-
-
-
   )
 }
 
 export default Login
-
-
-
