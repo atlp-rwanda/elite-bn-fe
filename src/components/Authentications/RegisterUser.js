@@ -5,17 +5,27 @@ import orange from '@material-ui/core/colors/orange'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as yup from 'yup'
-import Snackbar from '@mui/material/Snackbar'
-import Alert from '@mui/material/Alert'
-import { useDispatch } from 'react-redux'
+// import Snackbar from '@mui/material/Snackbar'
+// import Alert from '@mui/material/Alert'
+import { useDispatch, useSelector } from 'react-redux'
 import api from '../../../utils/api'
 import { setToken } from '../../redux/features/registerReducer'
+import { ErrorAlert, InfoAlert, SuccessAlert, WarnAlert } from '../Notifications/toastAlert'
+import { Stack } from '@mui/material'
+import { alertActions } from '../../redux/features/toastAlert'
 
 const Signup = ({ handleChange }) => {
   const paperStyle = {
     padding: 20,
     height: '20%',
     width: 320,
+  }
+  const alertStyle = {
+    position: 'fixed',
+    zIndex: '2000',
+    right: '3%',
+    bottom: '30px',
+    transition: 'all 300ms linear 0s',
   }
   const btnstyle = { margin: '8px 0', display: 'fixed' }
   const textField = { margin: '4px 0' }
@@ -49,7 +59,10 @@ const Signup = ({ handleChange }) => {
       ),
   })
   const [open, setOpen] = useState(false)
-  const [errorMessage, setErrorMessage] = useState(null)
+  // const [errorMessage, setErrorMessage] = useState(null)
+  const { warnMessage, infoMessage, errorMessage, successMessage } = useSelector(
+    (state) => state.alert
+  )
 
   const handleClick = () => {
     setOpen(true)
@@ -77,7 +90,12 @@ const Signup = ({ handleChange }) => {
         }
       })
       .catch((err) => {
-        setErrorMessage(err.response.data['Error:'])
+        const dispatch = useDispatch()
+        // setErrorMessage(err.response.data['Error:'])
+        dispatch(alertActions.error({ message: `${err.response.data['Error:']}` }))
+        setInterval(() => {
+          dispatch(alertActions.error({ message: null }))
+        }, 15000)
       })
   }
 
@@ -97,7 +115,13 @@ const Signup = ({ handleChange }) => {
               {errorMessage}
             </Alert>
           </Snackbar>
-        )}
+        )} */}
+        <Stack sx={alertStyle} spacing={2}>
+          {warnMessage && <WarnAlert />}
+          {infoMessage && <InfoAlert />}
+          {successMessage && <SuccessAlert />}
+          {errorMessage && <ErrorAlert />}
+        </Stack>
       </div>
       <Paper elevation={5} style={paperStyle}>
         <Formik

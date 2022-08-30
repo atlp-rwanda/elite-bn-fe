@@ -9,7 +9,6 @@ import Paper from '@material-ui/core/Paper'
 import { ThemeProvider } from '@material-ui/core/styles'
 import theme from './theme/theme'
 
-
 import { createTheme } from '@mui/material/styles'
 const THEME = createTheme({
   typography: {
