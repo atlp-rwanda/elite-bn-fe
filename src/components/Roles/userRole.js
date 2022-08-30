@@ -17,6 +17,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
+<<<<<<< Updated upstream
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -30,6 +31,11 @@ import {
 } from '../../redux/features/roleReducer';
 // import rows from "./rowData";
 
+=======
+
+
+
+>>>>>>> Stashed changes
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
     marginTop: theme.spacing(3),
@@ -86,18 +92,23 @@ export default function FormDialog() {
   const handleChange = (event) => {
     setRole(event.target.value);
   };
+<<<<<<< Updated upstream
   const paperStyle = {
     padding: 20,
     height: '20%',
     justifyContent: 'center',
 
   }
+=======
+
+>>>>>>> Stashed changes
   return (
     <Grid>
     <Box>
 
   <Stack spacing={2} direction="row" >      <ThemeProvider theme={theme}>
       <Button color="neutral" variant="contained" onClick={handleClickOpen}> Assign Role </Button>
+<<<<<<< Updated upstream
         <Button color="neutral" variant="contained" >Logout</Button>
         </ThemeProvider>
   </Stack>
@@ -129,6 +140,13 @@ export default function FormDialog() {
         </TableBody>
       </Table>
     </Paper>
+=======
+
+        </ThemeProvider>
+  </Stack>
+  <div>
+
+>>>>>>> Stashed changes
   </div>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle align='center' color={Colors.primary}>Assign New Role</DialogTitle>
@@ -169,6 +187,61 @@ export default function FormDialog() {
         </DialogActions>
       </Dialog>
     </Box>
+<<<<<<< Updated upstream
     </Grid>
   );
 }
+=======
+    <Box>
+
+<Stack spacing={2} direction="row" >      <ThemeProvider theme={theme}>
+    <Button color="neutral" variant="contained" onClick={handleClickOpen}> Assign Role </Button>
+
+      </ThemeProvider>
+</Stack>
+<div>
+
+</div>
+    <Dialog open={open} onClose={handleClose}>
+      <DialogTitle align='center' color={Colors.primary}>Assign New Role</DialogTitle>
+      <DialogContent>
+      <div>
+    <FormControl sx={{ m: 1 }} variant="standard">
+      <Typography> Email</Typography>
+      <InputLabel htmlFor="demo-customized-textbox"></InputLabel>
+      <BootstrapInput id="demo-customized-textbox" />
+    </FormControl>
+    <FormControl sx={{ m: 1 }} variant="standard">
+    <Typography>  Role</Typography>
+      <InputLabel id="demo-customized-select-label"></InputLabel>
+      <Select
+        labelId="demo-customized-select-label"
+        id="demo-customized-select"
+        value={role}
+        onChange={handleChange}
+        input={<BootstrapInput />}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        <MenuItem value={10}>Manager</MenuItem>
+        <MenuItem value={20}>Requester</MenuItem>
+        <MenuItem value={30}>Travel Administrator</MenuItem>
+
+      </Select>
+    </FormControl>
+
+  </div>
+
+      </DialogContent>
+      <DialogActions style={{justifyContent: 'center'}}>
+      <ThemeProvider theme={theme}>
+      <Button color="neutral" variant="contained" onClick={handleClose}>Save</Button>
+      </ThemeProvider>
+      </DialogActions>
+    </Dialog>
+  </Box>
+    </Grid>
+  );
+}
+>>>>>>> Stashed changes

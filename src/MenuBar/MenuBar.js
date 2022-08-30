@@ -38,7 +38,7 @@ const ResponsiveAppBar = () => {
   }
 
   return (
-    <AppBar position="static" style={{ display: path === '/dashboardLayout' && 'none' }}>
+    <AppBar position="static" style={{ display: path === '/DashboardLayout' && 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
