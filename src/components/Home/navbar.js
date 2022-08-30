@@ -53,13 +53,13 @@ function Navbar() {
           <Box align='center' > 
           <div className={classes.navlinks} >
             <Link to="/" className={classes.link}>
-              Home
+              home
             </Link>
             <Link to="/" className={classes.link} onClick={() => window.location.replace("/#about")}>
              services
             </Link>
             <Link to="/logout" className={classes.link}>
-              Log out
+              log out
             </Link>
           </div>
           </Box>
