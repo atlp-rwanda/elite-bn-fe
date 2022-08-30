@@ -20,14 +20,20 @@ const pages = [
     route: '/',
   },
   {
-    name: "Services",
-    route: "/services"
-  }, {
-    name: "Contact Us",
-    route: "/contact"
-  }, {
-    name: "RequestedTrip",
-    route: "/tripPage"
+    name: 'TravelRequests',
+    route: 'trip-requests',
+  },
+  {
+    name: 'Services',
+    route: '/services',
+  },
+  {
+    name: 'Contact Us',
+    route: '/contact',
+  },
+  {
+    name: 'RequestedTrip',
+    route: '/tripPage',
   },
   {
     name: 'Trips',
@@ -135,20 +141,16 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-               <Link
-               style={{textDecoration: 'none'}}
-               to={page.route}>
-              <Button
-                key={page.name}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                  
-                    {page.name}
-                    
+              <Link style={{ textDecoration: 'none' }} to={page.route}>
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page.name}
 
-                {/* {page.name} */}
-              </Button>
+                  {/* {page.name} */}
+                </Button>
               </Link>
             ))}
           </Box>

@@ -9,8 +9,7 @@ export default function Nav() {
   return (
     <div style={{ display: path === '/dashboard' && 'none' }}>
       <nav>
-        <ul>
-        </ul>
+        <ul></ul>
       </nav>
       <Outlet />
     </div>

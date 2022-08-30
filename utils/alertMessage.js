@@ -34,5 +34,5 @@ export default function AlertMassage({ message }) {
         ]}
       />
     </div>
-  );
+  )
 }
