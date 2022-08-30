@@ -11,6 +11,7 @@ import RegisterView from '../Views/RegisterView'
 import DashboardView from '../Views/Dashboard'
 import PrivateRoutes from '../../utils/privateRoute'
 import Logout from '../components/auth/auth.logout'
+import TripPageView from '../Views/tripView'
 
 
 import RequestView from '../Views/RequestView'
@@ -25,6 +26,7 @@ function AllRoutes() {
           <Route path="theme" element={<ThemeView />} />
           <Route path="dashboard" element={<DashboardView />} />
           <Route path="requests" element={<RequestView/>} />
+          <Route path="tripPage" element={<TripPageView />} />
         </Route>
 
         <Route path="login" element={<Login />} />

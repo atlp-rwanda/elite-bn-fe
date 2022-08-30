@@ -25,8 +25,8 @@ const pages = [
     name: "Contact Us",
     route: "/contact"
   }, {
-    name: "Requests",
-    route: "/requests"
+    name: "RequestedTrip",
+    route: "/tripPage"
   }]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
