@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     align: 'center',
     textDecoration: "none",
-    color: "white",
+    color: "orange",
     fontSize: "20px",
     textAlign: 'right',
     marginLeft: theme.spacing(20),
@@ -53,13 +53,13 @@ function Navbar() {
           <Box align='center' > 
           <div className={classes.navlinks} >
             <Link to="/" className={classes.link}>
-              home
+              HOME
             </Link>
             <Link to="/" className={classes.link} onClick={() => window.location.replace("/#about")}>
-             services
+             SERVICES
             </Link>
             <Link to="/logout" className={classes.link}>
-              log out
+              LOG OUT
             </Link>
           </div>
           </Box>
