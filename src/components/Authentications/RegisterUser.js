@@ -64,12 +64,12 @@ const Signup = ({ handleChange }) => {
     (state) => state.alert
   )
 
-  const handleClick = () => {
-    setOpen(true)
-  }
-  const handleClose = () => {
-    setOpen(false)
-  }
+  // const handleClick = () => {
+  //   setOpen(true)
+  // }
+  // const handleClose = () => {
+  //   setOpen(false)
+  // }
   const handleSubmit = (values, props) => {
     setTimeout(() => {
       props.resetForm()
@@ -79,14 +79,23 @@ const Signup = ({ handleChange }) => {
       .post('api/v1/user/register', values)
       .then((response) => {
         if (response.status === 200) {
-          window.location.replace('/')
+         
           const { token } = response.data
 
           localStorage.setItem('jwt', `${token}`)
 
-          const dispatch = useDispatch()
+           const dispatch = useDispatch()
 
-          dispatch(setToken(token))
+          // dispatch(setToken(token))
+          dispatch(
+            alertActions.success({message: `Hey ${values.username}, Welcome to Barefoot Nomad` })
+            );
+          setInterval(()=>{
+            dispatch(
+              alertActions.success({message: null })
+              );
+          },15000)
+          window.location.replace('/')
         }
       })
       .catch((err) => {
@@ -109,13 +118,13 @@ const Signup = ({ handleChange }) => {
       style={{ minHeight: '90vh' }}
     >
       <div>
-        {open && (
+        {/* {open && (
           <Snackbar open={errorMessage} autoHideDuration={6000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
               {errorMessage}
             </Alert>
           </Snackbar>
-        )} */}
+        )} */} */}
         <Stack sx={alertStyle} spacing={2}>
           {warnMessage && <WarnAlert />}
           {infoMessage && <InfoAlert />}
@@ -201,7 +210,7 @@ const Signup = ({ handleChange }) => {
                   style={btnstyle}
                   disabled={props.isSubmitting}
                   fullWidth
-                  onClick={handleClick}
+                  // onClick={handleClick}
                 >
                   {props.isSubmitting ? 'Loading' : 'Create account'}
                 </Button>
