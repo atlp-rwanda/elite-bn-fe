@@ -1,7 +1,19 @@
 const path = require('path')
 const Dotenv = require('dotenv-webpack')
+const dotenv = require('dotenv')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const env = dotenv.config().parsed
+const vercelEnv = process.env
+const envKeys = env
+  ? Object.keys(env).reduce((prev, next) => {
+      prev[`process.env.${next}`] = JSON.stringify(env[next])
+      return prev
+    }, {})
+  : Object.keys(vercelEnv).reduce((prev, next) => {
+      prev[`process.env.${next}`] = JSON.stringify(vercelEnv[next])
+      return prev
+    }, {})
 module.exports = {
   entry: './src/index.js',
   output: {
