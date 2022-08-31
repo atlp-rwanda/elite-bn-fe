@@ -9,7 +9,6 @@ function RegisterView() {
     isLoggedIn ? navigate('/') : ''
   }, [])
   return (
-    
     <div>
       <Signup />
     </div>

@@ -4,6 +4,9 @@ import Login from '../Views/LoginView'
 import HomeView from '../Views/HomeView'
 import CounterView from '../Views/CounterView'
 import ThemeView from '../Views/ThemeView'
+import { ForgotPassword } from '../components/password/ForgotPassword'
+import { ResetPassword } from '../components/password/ResetPassword'
+
 import RegisterView from '../Views/RegisterView'
 import DashboardView from '../Views/Dashboard'
 import PrivateRoutes from '../../utils/privateRoute'
@@ -24,9 +27,9 @@ function AllRoutes() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<RegisterView />} />
         <Route exact path="/" element={<HomeView />} />
-
         <Route path="logout" element={<Logout/>} />
-      
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="reset-password" element={<ResetPassword />} />
       </Routes>
     </div>
   )
