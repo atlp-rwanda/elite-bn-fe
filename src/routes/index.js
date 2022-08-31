@@ -7,6 +7,8 @@ import ThemeView from '../Views/ThemeView'
 import RegisterView from '../Views/RegisterView'
 import DashboardView from '../Views/Dashboard'
 import PrivateRoutes from '../../utils/privateRoute'
+import Logout from '../components/auth/auth.logout'
+
 
 function AllRoutes() {
   return (
@@ -23,6 +25,8 @@ function AllRoutes() {
         <Route path="register" element={<RegisterView />} />
         <Route exact path="/" element={<HomeView />} />
 
+        <Route path="logout" element={<Logout/>} />
+      
       </Routes>
     </div>
   )
