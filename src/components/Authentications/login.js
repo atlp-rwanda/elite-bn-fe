@@ -1,28 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import {
- Grid, Paper, TextField, Typography, Link 
-} from '@material-ui/core';
-import Button from '@mui/material/Button';
-import orange from '@material-ui/core/colors/orange';
-import GoogleIcon from '@mui/icons-material/Google';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {
- Formik, Form, Field, ErrorMessage 
-} from 'formik';
+import React, { useEffect, useState } from 'react'
+import { Grid, Paper, TextField, Typography, Link } from '@material-ui/core'
+import Button from '@mui/material/Button'
+import orange from '@material-ui/core/colors/orange'
+import GoogleIcon from '@mui/icons-material/Google'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 import Snackbar from '@mui/material/Snackbar'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setToken } from '../../redux/features/login'
 import MuiAlert from '@mui/material/Alert'
-;import api from '../../../utils/api'
+import api from '../../../utils/api'
 
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />;
+;<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
 const Alert = React.forwardRef((props, ref) => {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
+})
 
 const Login = () => {
 
@@ -34,19 +29,19 @@ const Login = () => {
   const btnstylesocial = { margin: '10px 0', backgroundColor: 'transparent', color: '#FFC107' }
   const signupLink = { margin: '20px 0px 0px 0px' }
 
-  const [open, setOpen] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [open, setOpen] = useState(false)
+  const [errorMessage, setErrorMessage] = useState(null)
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleClick = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   const theme = createTheme({
     palette: {
@@ -55,54 +50,56 @@ const Login = () => {
         contrastText: '#fff',
       },
     },
-  });
+  })
   const initialValues = {
     email,
     password,
-  };
+  }
 
   const validate = () => {
-    const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    const errors = {}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!email) {
-      errors.email = 'Email is required';
+      errors.email = 'Email is required'
     } else if (!regex.test(email)) {
-      errors.email = 'Please enter a valid email';
+      errors.email = 'Please enter a valid email'
     }
     if (!password) {
-      errors.password = 'Password is required';
+      errors.password = 'Password is required'
     } else if (password.length < 5) {
-      errors.password = 'Password too short';
+      errors.password = 'Password too short'
     }
-    return errors;
-  };
+    return errors
+  }
 
   const handleSubmit = (values, props) => {
     setTimeout(() => {
-      props.resetForm();
-      props.setSubmitting(false);
-    }, 2000);
+      props.resetForm()
+      props.setSubmitting(false)
+    }, 2000)
 
     api
       .post('api/v1/user/login', { email, password })
       .then((res) => {
         if (res.status === 200) {
-          window.location.replace('/');
+          window.location.replace('/')
 
           const { token } = res.data
+
           navigate('/')
 
           window.location.replace('/');
 
-          localStorage.setItem('jwt', `${token}`);
 
-          const dispatch = useDispatch();
+          localStorage.setItem('jwt', `${token}`)
 
-          dispatch(setToken(token));
+          const dispatch = useDispatch()
+
+          dispatch(setToken(token))
         }
       })
-      .catch((err) => setErrorMessage('Wrong email or password!'));
-  };
+      .catch((err) => setErrorMessage('Wrong email or password!'))
+  }
 
   return (
     <Grid>
@@ -204,7 +201,7 @@ const Login = () => {
         </Typography>
       </Paper>
     </Grid>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

@@ -70,14 +70,13 @@ export const ResetPassword = () => {
 
       setMsg(<Alert> Password reset successfully</Alert>)
 
-      setTimeout(()=>{
-        navigate('/login',{replace :true})
-      },2000)
-        
+      setTimeout(() => {
+        navigate('/login', { replace: true })
+      }, 2000)
+
       setPassword('')
       setconfirmpassword('')
       setError('')
-      
     } catch (err) {
       err.response.data.Error
         ? setError(<Alert severity="error">{`${err.response.data.Error}`}</Alert>)
