@@ -7,10 +7,11 @@ import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import { TextField } from '@material-ui/core'
-
+import Notifications from '../components/notification/notification'
 function HomeView() {
   return (
     <div>
+      <Notifications />
       <h1>Welcome to barefoot</h1>
     </div>
   )

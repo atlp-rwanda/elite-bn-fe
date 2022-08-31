@@ -15551,6 +15551,11 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
+socket.oi@^0.0.1-security.8:
+  version "0.0.1-security.8"
+  resolved "https://registry.yarnpkg.com/socket.oi/-/socket.oi-0.0.1-security.8.tgz#40ca589d7d6b11091ea68a42916e54ba171410d4"
+  integrity sha512-kIn2w3qW3EQUjx0JRaxMlm0RgStD0Djiti067SXMrfNh1hk6YxymRQe6DAmq46TAMcrFOF5I8ANSWN8ELJ5F+A==
+
 sockjs@^0.3.24:
   version "0.3.24"
   resolved "https://registry.yarnpkg.com/sockjs/-/sockjs-0.3.24.tgz#c9bc8995f33a111bea0395ec30aa3206bdb5ccce"

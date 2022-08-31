@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
-
-
-function App() {
+import Badge from '@mui/material/Badge';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+function Notifications() {
   return (
     <div>
-
+<Badge badgeContent={5} color="primary">
+  <NotificationsIcon color="action" />
+</Badge>
     </div>
   )
 }
 
-export default App
+export default Notifications
