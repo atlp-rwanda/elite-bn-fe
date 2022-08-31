@@ -12,14 +12,17 @@ function AllRoutes() {
   return (
     <div>
       <Routes>
+
         <Route element={<PrivateRoutes />}>
-          <Route exact path="/" element={<HomeView />} />
           <Route path="count" element={<CounterView />} />
           <Route path="theme" element={<ThemeView />} />
           <Route path="dashboard" element={<DashboardView />} />
         </Route>
+
         <Route path="login" element={<Login />} />
         <Route path="register" element={<RegisterView />} />
+        <Route exact path="/" element={<HomeView />} />
+
       </Routes>
     </div>
   )
