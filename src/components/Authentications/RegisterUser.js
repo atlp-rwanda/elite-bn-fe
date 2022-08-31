@@ -66,7 +66,7 @@ const Signup = ({ handleChange }) => {
       .post('api/v1/user/register', values)
       .then((response) => {
         if (response.status === 200) {
-          window.location.replace('/')
+          window.location.replace('/landing')
           const { token } = response.data
 
           localStorage.setItem('jwt', `${token}`)
@@ -188,7 +188,7 @@ const Signup = ({ handleChange }) => {
         <Typography>
           {' '}
           Do you have an account ?
-          <Link href="/" style={{ color: orange[400] }} underline="none">
+          <Link href="/login" style={{ color: orange[400] }} underline="none">
             {' '}
             Sign In{' '}
           </Link>
