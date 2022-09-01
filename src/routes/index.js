@@ -12,14 +12,12 @@ import DashboardView from '../Views/Dashboard'
 import PrivateRoutes from '../../utils/privateRoute'
 import Logout from '../components/auth/auth.logout'
 
-
 import RequestView from '../Views/RequestView'
 
 function AllRoutes() {
   return (
     <div>
       <Routes>
-
         <Route element={<PrivateRoutes />}>
           <Route path="count" element={<CounterView />} />
           <Route path="theme" element={<ThemeView />} />
