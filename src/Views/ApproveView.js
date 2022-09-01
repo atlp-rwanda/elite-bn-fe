@@ -1,8 +1,8 @@
 import React from 'react'
 import TravelRequests from '../../utils/table'
 
-function RequestView() {
+function ApproveView() {
   return <TravelRequests />
 }
 
-export default RequestView
+export default ApproveView

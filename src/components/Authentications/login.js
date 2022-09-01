@@ -1,34 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import {
- Grid, Paper, TextField, Typography, Link 
-} from '@material-ui/core';
-import Button from '@mui/material/Button';
-import orange from '@material-ui/core/colors/orange';
-import GoogleIcon from '@mui/icons-material/Google';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {
- Formik, Form, Field, ErrorMessage 
-} from 'formik';
+import React, { useEffect, useState } from 'react'
+import { Grid, Paper, TextField, Typography, Link } from '@material-ui/core'
+import Button from '@mui/material/Button'
+import orange from '@material-ui/core/colors/orange'
+import GoogleIcon from '@mui/icons-material/Google'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useDispatch } from 'react-redux'
 import { setToken } from '../../redux/features/login'
 import api from '../../../utils/api'
-import AlertMassage from '../../../utils/alertMessage';
-
+import AlertMassage from '../../../utils/alertMessage'
 
 const Login = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const paperStyle = {
- padding: 20, height: '20%', width: 300, margin: '100px auto' 
-};
-  const btnstyle = { margin: '8px 0', display: 'fixed' };
-  const textField = { margin: '15px 5px 5px 0' };
+    padding: 20,
+    height: '20%',
+    width: 300,
+    margin: '100px auto',
+  }
+  const btnstyle = { margin: '8px 0', display: 'fixed' }
+  const textField = { margin: '15px 5px 5px 0' }
   const btnstylesocial = {
- margin: '10px 0', backgroundColor: 'transparent', color: '#FFC107', TextDecoder: 'none' };
-  const signupLink = { margin: '20px 0px 0px 0px' };
+    margin: '10px 0',
+    backgroundColor: 'transparent',
+    color: '#FFC107',
+    TextDecoder: 'none',
+  }
+  const signupLink = { margin: '20px 0px 0px 0px' }
 
-
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null)
   const [successMsg, setSuccessMsg] = useState(null)
 
   const [email, setEmail] = useState('')
@@ -63,7 +64,6 @@ const Login = () => {
     return errors
   }
 
-
   const handleSubmit = (values, props) => {
     setTimeout(() => {
       props.resetForm()
@@ -74,29 +74,24 @@ const Login = () => {
       .post('api/v1/user/login', { email, password })
       .then((res) => {
         if (res.status === 200) {
-
           const { token } = res.data
 
-          localStorage.setItem('jwt', `${token}`);
-          
-          dispatch(setToken(token));
+          localStorage.setItem('jwt', `${token}`)
 
-          setSuccessMsg({ msg: res.data.message, key: Math.random() });
+          dispatch(setToken(token))
 
-          window.location.replace('/');
+          setSuccessMsg({ msg: res.data.message, key: Math.random() })
 
+          window.location.replace('/')
         }
       })
       .catch((err) => {
-
-        setErrorMessage({ msg: err.response.data.message, key: Math.random() });
-        
-      });
-  };
+        setErrorMessage({ msg: err.response.data.message, key: Math.random() })
+      })
+  }
 
   return (
     <Grid>
-  
       <Paper elevation={5} style={paperStyle}>
         <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validate}>
           {(props) => (
@@ -143,9 +138,9 @@ const Login = () => {
                   {props.isSubmitting ? 'Loading' : 'Sign In'}
                 </Button>
                 {successMsg ? <AlertMassage key={successMsg.key} message={successMsg.msg} /> : null}
-                {errorMessage ? <AlertMassage key={errorMessage.key} message={errorMessage.msg} /> : null}
-
-
+                {errorMessage ? (
+                  <AlertMassage key={errorMessage.key} message={errorMessage.msg} />
+                ) : null}
               </ThemeProvider>
             </Form>
           )}
@@ -191,4 +186,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default Login

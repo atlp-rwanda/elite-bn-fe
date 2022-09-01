@@ -1,11 +1,11 @@
-import React from "react";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-import rows from "./tableRows";
+import React from 'react'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import Paper from '@material-ui/core/Paper'
+import rows from './tableRows'
 
 export default () => (
   <div>
@@ -22,7 +22,7 @@ export default () => (
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(({ id, requestename, email, role, city}) => (
+          {rows.map(({ id, requestename, email, role, city }) => (
             <TableRow key={id}>
               <TableCell component="th" scope="row">
                 {name}
@@ -37,4 +37,4 @@ export default () => (
       </Table>
     </Paper>
   </div>
-);
+)
