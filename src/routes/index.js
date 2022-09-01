@@ -13,6 +13,8 @@ import PrivateRoutes from '../../utils/privateRoute'
 import Logout from '../components/auth/auth.logout'
 
 
+import RequestView from '../Views/RequestView'
+
 function AllRoutes() {
   return (
     <div>
@@ -22,12 +24,13 @@ function AllRoutes() {
           <Route path="count" element={<CounterView />} />
           <Route path="theme" element={<ThemeView />} />
           <Route path="dashboard" element={<DashboardView />} />
+          <Route path="requests" element={<RequestView/>} />
         </Route>
 
         <Route path="login" element={<Login />} />
         <Route path="register" element={<RegisterView />} />
         <Route exact path="/" element={<HomeView />} />
-        <Route path="logout" element={<Logout/>} />
+        <Route exact path="logout" element={<Logout/>} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
       </Routes>

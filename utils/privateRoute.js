@@ -3,6 +3,7 @@ import React from 'react'
 import jwt_decode from 'jwt-decode'
 import { useDispatch, useSelector } from 'react-redux'
 import Nav from '../src/dammyNav'
+// import Nav from '../src/MenuBar/MenuBar'
 
 const PrivateRoutes = () => {
   const dispatch = useDispatch()
