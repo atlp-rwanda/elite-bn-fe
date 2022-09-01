@@ -11,8 +11,7 @@ import RegisterView from '../Views/RegisterView'
 import DashboardView from '../Views/Dashboard'
 import PrivateRoutes from '../../utils/privateRoute'
 import Logout from '../components/auth/auth.logout'
-
-
+import RequestViews from '../Views/RequestsViews'
 import RequestView from '../Views/RequestView'
 
 function AllRoutes() {
@@ -28,6 +27,7 @@ function AllRoutes() {
         </Route>
 
         <Route path="login" element={<Login />} />
+        <Route path="trip-requests" element={<RequestViews />} />
         <Route path="register" element={<RegisterView />} />
         <Route exact path="/" element={<HomeView />} />
         <Route exact path="logout" element={<Logout/>} />
