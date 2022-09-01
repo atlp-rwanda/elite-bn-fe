@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react'
 import TableTemplate from '../src/components/TableTemplate'
 import { Grid, Button } from '@material-ui/core'
@@ -9,27 +7,26 @@ import axios from 'axios'
 import api from './api'
 import { useEffect } from 'react'
 import { withTheme } from 'styled-components'
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import DialogContentText from '@mui/material/DialogContentText'
+import DialogTitle from '@mui/material/DialogTitle'
 import { response } from 'msw'
 const TravelRequests = () => {
   const [rows, setRows] = useState([])
-  const[message,setMessage]=useState('')
-  const [open, setOpen] = useState(false);
-  const [selectedId, setSelectedId] = useState(0);
-
+  const [message, setMessage] = useState('')
+  const [open, setOpen] = useState(false)
+  const [selectedId, setSelectedId] = useState(0)
 
   useEffect(() => {
     FetchRequests()
   }, [])
   const handleApprove = () => {
-    HandleReject(selectedId);
-    setTimeout(()=>{
+    HandleReject(selectedId)
+    setTimeout(() => {
       handleClose()
-    },1000)
+    }, 1000)
   }
   const columns = [
     { field: 'id', headerName: 'TripId', width: 90 },
@@ -86,7 +83,7 @@ const TravelRequests = () => {
               </Button>
             </Grid>
             <Grid item>
-            <Button onClick={()=>handleClickOpen(params.row.id)}>
+              <Button onClick={() => handleClickOpen(params.row.id)}>
                 <Block />
               </Button>
             </Grid>
@@ -95,10 +92,14 @@ const TravelRequests = () => {
       },
     },
   ]
-   const HandleReject = async (id) => {
+  const HandleReject = async (id) => {
     try {
-      const token = localStorage.getItem('jwt');
-        await axios.patch(`${process.env.BACKEND_URL}api/v1/request/reject/${id}`, {}, {headers: {token}})
+      const token = localStorage.getItem('jwt')
+      await axios.patch(
+        `${process.env.BACKEND_URL}api/v1/request/reject/${id}`,
+        {},
+        { headers: { token } }
+      )
       setMessage(<Alert> REJECTED</Alert>)
     } catch (err) {
       setMessage(<Alert severity="error">{err.response.data.response}</Alert>)
@@ -106,14 +107,16 @@ const TravelRequests = () => {
     }
   }
   const FetchRequests = async () => {
-    try{
-      const token = localStorage.getItem('jwt');
-      const requests =  await api.get("api/v1/trip/allTrips",{headers:{token: `Bearer ${token}`}})
-  
-     const data = requests.data.getAlltrips
+    try {
+      const token = localStorage.getItem('jwt')
+      const requests = await api.get('api/v1/trip/allTrips', {
+        headers: { token: `Bearer ${token}` },
+      })
+
+      const data = requests.data.getAlltrips
       const newRows = data.map((element, index) => {
         return {
-          id:index,
+          id: index,
           from: element.from,
           departDate: element.departDate,
           returnDate: element.returnDate,
@@ -125,21 +128,20 @@ const TravelRequests = () => {
         }
       })
       setRows(newRows)
-    }
-    catch(err){
+    } catch (err) {
       err.response.data.response
-      ?setMessage(<Alert severity="error">{err.response.data.response}</Alert>)
-      :setMessage(<Alert severity="error">Token expired please login again</Alert>)
+        ? setMessage(<Alert severity="error">{err.response.data.response}</Alert>)
+        : setMessage(<Alert severity="error">Token expired please login again</Alert>)
       console.log(err)
     }
   }
   const handleClose = () => {
-    setOpen(false);
+    setOpen(false)
   }
   const handleClickOpen = (id) => {
-    setSelectedId(id);
-    setOpen(true);
-  };
+    setSelectedId(id)
+    setOpen(true)
+  }
   return (
     <div>
       <Dialog
@@ -148,11 +150,10 @@ const TravelRequests = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title"></DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-          Are you sure you want to do this action ?
+            Are you sure you want to do this action ?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -168,9 +169,3 @@ const TravelRequests = () => {
   )
 }
 export default TravelRequests
-
-
-
-
-
-

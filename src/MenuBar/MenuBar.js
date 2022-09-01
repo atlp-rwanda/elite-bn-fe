@@ -15,19 +15,26 @@ import { Link } from 'react-router-dom'
 
 const pages = [
   {
-    name: "Home",
-    route: "/"
+    name: 'Home',
+    route: '/',
   },
   {
-    name: "Services",
-    route: "/services"
-  }, {
-    name: "Contact Us",
-    route: "/contact"
-  }, {
-    name: "Requests",
-    route: "/requests"
-  }]
+    name: 'Services',
+    route: '/services',
+  },
+  {
+    name: 'Trip-requests',
+    route: '/trip-requests',
+  },
+  {
+    name: 'Contact Us',
+    route: '/contact',
+  },
+  {
+    name: 'Requests',
+    route: '/requests',
+  },
+]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 const ResponsiveAppBar = () => {
@@ -129,20 +136,16 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-               <Link
-               style={{textDecoration: 'none'}}
-               to={page.route}>
-              <Button
-                key={page.name}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                  
-                    {page.name}
-                    
+              <Link style={{ textDecoration: 'none' }} to={page.route}>
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page.name}
 
-                {/* {page.name} */}
-              </Button>
+                  {/* {page.name} */}
+                </Button>
               </Link>
             ))}
           </Box>

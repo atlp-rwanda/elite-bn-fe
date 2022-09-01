@@ -18,19 +18,18 @@ function AllRoutes() {
   return (
     <div>
       <Routes>
-
         <Route element={<PrivateRoutes />}>
           <Route path="count" element={<CounterView />} />
           <Route path="theme" element={<ThemeView />} />
           <Route path="dashboard" element={<DashboardView />} />
-          <Route path="requests" element={<RequestView/>} />
+          <Route path="requests" element={<RequestView />} />
         </Route>
 
         <Route path="login" element={<Login />} />
         <Route path="trip-requests" element={<RequestViews />} />
         <Route path="register" element={<RegisterView />} />
         <Route exact path="/" element={<HomeView />} />
-        <Route exact path="logout" element={<Logout/>} />
+        <Route exact path="logout" element={<Logout />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
       </Routes>
