@@ -41,32 +41,8 @@ export default function Footer() {
               <Box>
                 <Typography paragraph color="common.white">
                   The rules and regulation should be followed. The user experience with this product
-                  is suitable for use and all terms and conditon should be as well implemented.
+                  is suitable for use terms and conditon should be implemented.
                 </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography className={classes.footerTitle}>Useful links</Typography>
-              <Box>
-                <Link to="/" className={classes.link}>
-                  Home
-                </Link>{' '}
-                <br />
-                <Link
-                  to="/"
-                  className={classes.link}
-                  onClick={() => window.location.replace('/#about')}
-                >
-                  services
-                </Link>{' '}
-                <br />
-                <Link to="/login" className={classes.link}>
-                  Login
-                </Link>{' '}
-                <br />
-                <Link to="/register" className={classes.link}>
-                  Register
-                </Link>
               </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
@@ -79,8 +55,6 @@ export default function Footer() {
                 <InstagramIcon />
                 <br />
                 <LinkedInIcon />
-                <br />
-                <TwitterIcon />
               </Box>
             </Grid>
           </Grid>
