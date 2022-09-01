@@ -1,6 +1,8 @@
+
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Login from '../components/Authentications/login'
+// import Feedback from '../components/feedback/Feedback';
 
 function LoginView() {
   const navigate = useNavigate()
@@ -13,6 +15,7 @@ function LoginView() {
   return (
     <div>
       <Login />
+      {/* <Feedback/> */}
     </div>
   )
 }
