@@ -13,6 +13,19 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import InboxIcon from '@mui/icons-material/Inbox';
+import DraftsIcon from '@mui/icons-material/Drafts';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
 import {
   getAllnotifications,
   getSingleNotifications,
@@ -62,11 +75,11 @@ const handleClose = () => {
     }, []);
     const { notifications } = useSelector(thisNotification);
 
-console.log(count)
+  
   return (
   
     <div>
-    <Badge badgeContent={1} color="primary">
+    <Badge badgeContent={notifications?.payload?.data?.data?.filter((notification)=>!notification?.isRead).length} color="primary">
     <NotificationsIcon 
 color="action" 
 id="demo-positioned-button"
@@ -76,7 +89,6 @@ aria-expanded={open ? 'true' : undefined}
 onClick={handleClick}
 />
 </Badge>
-
 
   <Menu
     id="demo-positioned-menu"
@@ -93,11 +105,22 @@ onClick={handleClick}
       horizontal: 'left',
     }}
   >
-    <MenuItem onClick={handleClose}>
-      <Card>
-    {JSON.stringify(notifications?.payload?.data)}
-    </Card>
-    </MenuItem>
+{notifications?.payload?.data?.data?.map((notification)=>{
+return  <MenuItem >
+  
+  <List>
+          <ListItem disablePadding>
+    
+              <ListItemText primary={notification.title} /> <br />
+              <ListItemText primary={notification.message} />
+              <ListItemText primary={notification.createdAt} />
+            
+          </ListItem>
+             <Divider />
+        </List>
+  </MenuItem>
+})}
+   
   </Menu>
 </div>
   )
