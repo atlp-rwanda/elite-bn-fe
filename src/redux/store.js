@@ -14,6 +14,7 @@ import logger from 'redux-logger'
 import counterReducer from './counter'
 import authRegistration from './features/registerReducer'
 import authLogin from './features/login';
+import notificationSlice from './features/notification'
 
 const persistConfig = {
   key: 'root',
@@ -23,12 +24,14 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, counterReducer)
 const persistRegister = persistReducer(persistConfig, authRegistration)
 const persistLogin = persistReducer(persistConfig, authLogin);
+const persistNotications = persistReducer(persistConfig, notificationSlice);
 
 export const store = configureStore({
   reducer: {
     counter: persistedReducer,
     Token: persistRegister,
     Token: persistLogin,
+    getNotification:persistNotications
   },
   devTools: process.env.NODE_ENV === 'development',
   middleware: (getDefaultMiddleware) =>
