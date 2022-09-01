@@ -13,7 +13,6 @@ import { TextField } from '@material-ui/core'
 function HomeView() {
   return (
     <div>
-     
       <h1>Welcome to barefoot</h1>
     </div>
   )
