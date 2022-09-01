@@ -13,6 +13,7 @@ import PrivateRoutes from '../../utils/privateRoute'
 import Logout from '../components/auth/auth.logout'
 import RequestViews from '../Views/RequestsViews'
 import RequestView from '../Views/RequestView'
+import ApproveView from '../Views/ApproveView'
 
 function AllRoutes() {
   return (
@@ -23,6 +24,7 @@ function AllRoutes() {
           <Route path="theme" element={<ThemeView />} />
           <Route path="dashboard" element={<DashboardView />} />
           <Route path="requests" element={<RequestView />} />
+          <Route path="approve" element={<ApproveView />}/>
         </Route>
 
         <Route path="login" element={<Login />} />
