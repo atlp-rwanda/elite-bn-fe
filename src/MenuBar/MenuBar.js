@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { BrowserRouter as Router, useLocation } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -10,7 +11,6 @@ import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
-import { BrowserRouter as Router, useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 const pages = [
@@ -31,10 +31,12 @@ const pages = [
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 const ResponsiveAppBar = () => {
+  const location = useLocation();
+  const path = location.pathname;
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const [anchorElUser, setAnchorElUser] = React.useState(null)
-  const location = useLocation()
-  const path = location.pathname
+  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
@@ -52,7 +54,7 @@ const ResponsiveAppBar = () => {
   }
 
   return (
-    <AppBar position="static" style={{ display: path === '/dashboardLayout' && 'none' }}>
+    <AppBar position="static" style={{ display: path === '/dashboardLayout' && 'none', display: path === "/profile" && "none"  }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

@@ -8,6 +8,7 @@ export default function Nav() {
   const path = location.pathname
   return (
     <div style={{ display: path === '/dashboard' && 'none' }}>
+       <div style={{display: path === "/profile" && "none" }}>
       <nav>
         <ul>
         
@@ -15,6 +16,7 @@ export default function Nav() {
         </ul>
       </nav>
       <Outlet />
+    </div>
     </div>
   )
 }
