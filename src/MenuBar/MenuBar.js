@@ -32,8 +32,17 @@ const pages = [
   {
     name: 'Trips',
     route: '/trips',
-  },]
+  },
 
+  {
+    name: 'Travel-requests',
+    route: '/trip-requests',
+  },
+  {
+    name: 'Requests',
+    route: '/requests',
+  },
+]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 const ResponsiveAppBar = () => {
@@ -135,20 +144,16 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-               <Link
-               style={{textDecoration: 'none'}}
-               to={page.route}>
-              <Button
-                key={page.name}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                  
-                    {page.name}
-                    
+              <Link style={{ textDecoration: 'none' }} to={page.route}>
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page.name}
 
-                {/* {page.name} */}
-              </Button>
+                  {/* {page.name} */}
+                </Button>
               </Link>
             ))}
           </Box>
