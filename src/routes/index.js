@@ -25,6 +25,7 @@ function AllRoutes() {
           <Route path="theme" element={<ThemeView />} />
           <Route path="dashboard" element={<DashboardView />} />
           <Route path="requests" element={<RequestView/>} />
+          <Route path="profile" element={<Profiles />} />
         </Route>
 
         <Route path="login" element={<Login />} />
@@ -36,7 +37,7 @@ function AllRoutes() {
 
         <Route path="logout" element={<Logout/>} />
       
-        <Route path="profile" element={<Profiles />} />
+       
       </Routes>
     </div>
   )

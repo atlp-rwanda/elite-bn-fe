@@ -82,8 +82,8 @@ const userProfile= {
           dispatch(getProfileData(profile));
         })
         .catch((err) => {
-          alert(err)
-          console.log(err)
+          // alert(err)
+          // console.log(err)
         });
     };
     renderState();
