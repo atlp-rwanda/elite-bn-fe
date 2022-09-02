@@ -6,15 +6,27 @@ import GoogleIcon from '@mui/icons-material/Google'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setToken } from '../../redux/features/login'
 import api from '../../../utils/api'
+import { ErrorAlert, InfoAlert, SuccessAlert, WarnAlert } from '../Notifications/toastAlert.js'
+import { Stack } from '@mui/material'
+import { alertActions } from '../../redux/features/toastAlert'
 import AlertMassage from '../../../utils/alertMessage'
-import { useNavigate } from 'react-router-dom'
+
+const alertStyle = {
+  position: 'fixed',
+  zIndex: '2000',
+  right: '3%',
+  top: '80px',
+  transition: 'all 300ms linear 0s',
+}
 
 const Login = () => {
-  const navigate = useNavigate()
   const dispatch = useDispatch()
+  const { warnMessage, infoMessage, errorMessage, successMessage } = useSelector(
+    (state) => state.alert
+  )
   const paperStyle = {
     padding: 20,
     height: '20%',
@@ -30,8 +42,6 @@ const Login = () => {
     TextDecoder: 'none',
   }
   const signupLink = { margin: '20px 0px 0px 0px' }
-
-  const [errorMessage, setErrorMessage] = useState(null)
   const [successMsg, setSuccessMsg] = useState(null)
 
   const [email, setEmail] = useState('')
@@ -82,18 +92,30 @@ const Login = () => {
 
           dispatch(setToken(token))
 
-          setSuccessMsg({ msg: res.data.message, key: Math.random() })
-
-          navigate('/landing')
+          dispatch(alertActions.success({ message: 'Hey Welcome to Barefoot Nomad' }))
+          setTimeout(() => {
+            dispatch(alertActions.success({ message: null }))
+            window.location.replace('/landing')
+          }, 3000)
         }
       })
       .catch((err) => {
-        setErrorMessage({ msg: err.response.data.message, key: Math.random() })
+        dispatch(alertActions.error({ message: `${err.response.data.message}` }))
+        setTimeout(() => {
+          dispatch(alertActions.error({ message: null }))
+        }, 15000)
       })
   }
 
   return (
     <Grid>
+      <Stack sx={alertStyle} spacing={2}>
+        {warnMessage && <WarnAlert />}
+        {infoMessage && <InfoAlert />}
+        {successMessage && <SuccessAlert />}
+        {errorMessage && <ErrorAlert />}
+      </Stack>
+
       <Paper elevation={5} style={paperStyle}>
         <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validate}>
           {(props) => (

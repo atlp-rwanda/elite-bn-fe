@@ -23,10 +23,10 @@ export default function Footer() {
   return (
     <div>
         <footer>
-      <Box bgcolor="#484A50" color="common.white" px={{ xs: 5, sm: 10 }} py={{ xs: 5, sm: 10 }}>
+      <Box bgcolor="#484A50" color="common.white" px={{ xs: 5, sm: 10 }} py={{ xs: 5, sm: 10 }} className={classes.footerWidth}>
         <Container maxWidth="lg">
           <Grid container spacing={5} wrap="nowrap" item xs={12} >
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={3}>
               <Box>
                 <Typography className={classes.footerTitle}>About us</Typography>
               </Box>

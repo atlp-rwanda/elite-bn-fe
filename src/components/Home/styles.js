@@ -11,6 +11,12 @@ const useStyles = makeStyles((theme) => ({
   list: {
     display: 'flex',
   },
+  footerWidth: {
+    [theme.breakpoints.down('xs')]: {
+      width: theme.palette.secondary.main,
+    },
+
+  },
   paperContainer: {
     backgroundImage: `url(${Image})`,
     backgroundSize: 'cover',

@@ -51,12 +51,8 @@ function Landing() {
     }, [])
   }
 
-  const divStyle = {
-    width: 'fit-content',
-  }
-
   return (
-    <div className={classes.root} style={divStyle}>
+    <div className={classes.root}>
       <Paper className={classes.paperContainer} elevation={0}>
         <LandingNav />
         <Grid

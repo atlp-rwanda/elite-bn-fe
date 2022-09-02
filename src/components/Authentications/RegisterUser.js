@@ -5,13 +5,28 @@ import orange from '@material-ui/core/colors/orange'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as yup from 'yup'
-import Snackbar from '@mui/material/Snackbar'
-import Alert from '@mui/material/Alert'
-import { useDispatch } from 'react-redux'
+// import Snackbar from '@mui/material/Snackbar'
+// import Alert from '@mui/material/Alert'
+import { useDispatch, useSelector } from 'react-redux'
 import api from '../../../utils/api'
 import { setToken } from '../../redux/features/registerReducer'
+import { ErrorAlert, InfoAlert, SuccessAlert, WarnAlert } from '../Notifications/toastAlert.js'
+import { Stack } from '@mui/material'
+import { alertActions } from '../../redux/features/toastAlert'
+
+const alertStyle = {
+  position: 'fixed',
+  zIndex: '2000',
+  right: '3%',
+  top: '80px',
+  transition: 'all 300ms linear 0s',
+}
 
 const Signup = ({ handleChange }) => {
+  const dispatch = useDispatch()
+  const { warnMessage, infoMessage, errorMessage, successMessage } = useSelector(
+    (state) => state.alert
+  )
   const paperStyle = {
     padding: 20,
     height: '20%',
@@ -48,15 +63,15 @@ const Signup = ({ handleChange }) => {
         'Password must at least contain one uppercase & lowercase letter, number, special character and at least 8 characters'
       ),
   })
-  const [open, setOpen] = useState(false)
-  const [errorMessage, setErrorMessage] = useState(null)
+  // const [open, setOpen] = useState(false)
 
-  const handleClick = () => {
-    setOpen(true)
-  }
-  const handleClose = () => {
-    setOpen(false)
-  }
+
+  // const handleClick = () => {
+  //   setOpen(true)
+  // }
+  // const handleClose = () => {
+  //   setOpen(false)
+  // }
   const handleSubmit = (values, props) => {
     setTimeout(() => {
       props.resetForm()
@@ -66,18 +81,24 @@ const Signup = ({ handleChange }) => {
       .post('api/v1/user/register', values)
       .then((response) => {
         if (response.status === 200) {
-          window.location.replace('/landing')
+          window.location.replace('/')
           const { token } = response.data
 
           localStorage.setItem('jwt', `${token}`)
 
-          const dispatch = useDispatch()
-
           dispatch(setToken(token))
+          dispatch(alertActions.success({ message: 'Hey Welcome to Barefoot Nomad' }))
+          setTimeout(() => {
+            dispatch(alertActions.success({ message: null }))
+            window.location.replace('/landing')
+          }, 3000)
         }
       })
       .catch((err) => {
-        setErrorMessage(err.response.data['Error:'])
+        dispatch(alertActions.error({ message: `${err.response.data['Error:']}` }))
+        setTimeout(() => {
+          dispatch(alertActions.error({ message: null }))
+        }, 15000)
       })
   }
 
@@ -90,15 +111,12 @@ const Signup = ({ handleChange }) => {
       justifyContent="center"
       style={{ minHeight: '90vh' }}
     >
-      <div>
-        {open && (
-          <Snackbar open={errorMessage} autoHideDuration={6000} onClose={handleClose}>
-            <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-              {errorMessage}
-            </Alert>
-          </Snackbar>
-        )}
-      </div>
+              <Stack sx={alertStyle} spacing={2}>
+        {warnMessage && <WarnAlert />}
+        {infoMessage && <InfoAlert />}
+        {successMessage && <SuccessAlert />}
+        {errorMessage && <ErrorAlert />}
+      </Stack>
       <Paper elevation={5} style={paperStyle}>
         <Formik
           initialValues={initialValues}
@@ -107,7 +125,6 @@ const Signup = ({ handleChange }) => {
         >
           {(props) => (
             <Form>
-              {errorMessage && <Snackbar open={errorMessage} message={errorMessage} />}
               <Field
                 as={TextField}
                 id="firstName"
@@ -177,7 +194,7 @@ const Signup = ({ handleChange }) => {
                   style={btnstyle}
                   disabled={props.isSubmitting}
                   fullWidth
-                  onClick={handleClick}
+
                 >
                   {props.isSubmitting ? 'Loading' : 'Create account'}
                 </Button>
