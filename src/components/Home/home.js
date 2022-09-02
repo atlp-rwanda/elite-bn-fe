@@ -50,9 +50,12 @@ function Home() {
       })
     }, [])
   }
+  const divStyle = {
+    width: 'fit-content',
+  }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={divStyle}>
       <Paper className={classes.paperContainer} elevation={0}>
         <Navbar />
         <Grid

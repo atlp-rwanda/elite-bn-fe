@@ -21,10 +21,11 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   const classes = useStyles()
   return (
-    <footer>
-      <Box bgcolor="#484A50" color="common.white" px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }}>
+    <div>
+        <footer>
+      <Box bgcolor="#484A50" color="common.white" px={{ xs: 5, sm: 10 }} py={{ xs: 5, sm: 10 }}>
         <Container maxWidth="lg">
-          <Grid container spacing={5} wrap="nowrap">
+          <Grid container spacing={5} wrap="nowrap" item xs={12} >
             <Grid item xs={12} sm={4}>
               <Box>
                 <Typography className={classes.footerTitle}>About us</Typography>
@@ -70,5 +71,8 @@ export default function Footer() {
         </Container>
       </Box>
     </footer>
+      
+    </div>
+
   )
 }

@@ -67,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 100,
     fontFamily: 'Roboto',
     color: '#fff',
+    paddingTop: 190,
     fontSize: 34,
     fontWeight: 1000,
   },

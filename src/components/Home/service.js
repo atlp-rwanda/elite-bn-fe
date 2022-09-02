@@ -24,7 +24,7 @@ function Service() {
       >
         Our Services
       </Typography>
-      <Grid container direction="column" alignItems="center" justify="center">
+      <Grid container direction="column" alignItems="center" >
         <TitlebarImageList />
         <Destination />
         <Feedback />
