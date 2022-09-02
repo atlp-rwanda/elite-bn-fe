@@ -14,15 +14,7 @@ export const profileSlice = createSlice({
         preferredLanguage: '',
         preferredCurrency: '',
         lineManager: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
          phone: '',
-=======
-        phone: '',
->>>>>>> feat(user profiles):user should be view and edit their profiles
-=======
-         phone: '',
->>>>>>> feat(user profile):user should be able to view and edit profile preferences
         birthdate: '',
       },
     },
