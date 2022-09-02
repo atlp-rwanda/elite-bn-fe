@@ -4,6 +4,7 @@ import Login from '../Views/LoginView'
 import HomeView from '../Views/HomeView'
 import CounterView from '../Views/CounterView'
 import ThemeView from '../Views/ThemeView'
+import RequestsView from '../Views/TravelRequests'
 import { ForgotPassword } from '../components/password/ForgotPassword'
 import { ResetPassword } from '../components/password/ResetPassword'
 import RegisterView from '../Views/RegisterView'
@@ -13,7 +14,6 @@ import Logout from '../components/auth/auth.logout'
 import TripPageView from '../Views/tripView'
 import TableTemplate from '../components/TableTemplate'
 import UserRequests from '../Views/UserRequests'
-
 import RequestView from '../Views/RequestView'
 
 function AllRoutes() {
@@ -24,15 +24,16 @@ function AllRoutes() {
           <Route path="count" element={<CounterView />} />
           <Route path="theme" element={<ThemeView />} />
           <Route path="dashboard" element={<DashboardView />} />
-          <Route path="requests" element={<RequestView/>} />
+          <Route path="requests" element={<RequestView />} />
           <Route path="tripPage" element={<TripPageView />} />
           <Route path="trips" element={<UserRequests />} />
         </Route>
 
         <Route path="login" element={<Login />} />
         <Route path="register" element={<RegisterView />} />
+        <Route path="trip-requests" element={<RequestsView />} />
         <Route exact path="/" element={<HomeView />} />
-        <Route exact path="logout" element={<Logout/>} />
+        <Route exact path="logout" element={<Logout />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
       </Routes>

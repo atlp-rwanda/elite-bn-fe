@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-}));
+}))
 
 const theme = createTheme({
   palette: {
@@ -29,51 +29,67 @@ const theme = createTheme({
 });
 
 export default function Requests() {
-  const [trips, getTrip] = React.useState('');
+  const [trips, getTrip] = React.useState('')
 
   React.useEffect(() => {
-    getRequestedTrip();
-  }, []);
+    getRequestedTrip()
+  }, [])
 
   const getRequestedTrip = async () => {
     try {
-      const token = localStorage.getItem('jwt');
-      const tripsA = await api.get('api/v1/trip/', {
+      const token = localStorage.getItem('jwt')
+      const tripsA = await api.get(`api/v1/trip/`, {
         headers: { token },
-      });
-      const allTrip = tripsA.data.getTrip;
-      console.log(allTrip);
-      getTrip(allTrip);
+      })
+      const allTrip = tripsA.data.getTrip
+      console.log(allTrip)
+      getTrip(allTrip)
     } catch (err) {
-      console.log(err);
+      console.log(err)
     }
-  };
+  }
 
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = React.useState(1)
 
   const handlePageChange = (e, p) => {
-    setPage(p);
-  };
+    setPage(p)
+  }
 
   return (
-    <Container fixed >
-      <Item className="book-grid" >
-          <Stack spacing={2} direction="row" sx={{ pt: 3, display: { justifyContent: 'space-between' } }}>
+    <Container fixed>
+      <Item className="book-grid">
+        <Stack
+          spacing={2}
+          direction="row"
+          sx={{ pt: 3, display: { justifyContent: 'space-between' } }}
+        >
           <ThemeProvider theme={theme}>
-            <Button variant="contained" color="neutral" className='button'>Create a trip request</Button>
+            <Button variant="contained" color="neutral" className="button">
+              Create a trip request
+            </Button>
           </ThemeProvider>
-          </Stack>
-        <Typography variant="h6" component="h6" pt={8} sx={{ textAlign: 'center', fontWeight: 800, fontSize: 30 }}>
+        </Stack>
+        <Typography
+          variant="h6"
+          component="h6"
+          pt={8}
+          sx={{ textAlign: 'center', fontWeight: 800, fontSize: 30 }}
+        >
           Trip requests you made
         </Typography>
 
-        <TripRequest trips={trips}/>
-
+        <TripRequest trips={trips} />
       </Item>
-      <Grid container justifyContent="center" alignItems='center' direction='column'>
-        <Pagination count={5} color="primary" onChange={handlePageChange} style={{ marginTop: '2em', marginBottom: '2em' }}> </Pagination>
+      <Grid container justifyContent="center" alignItems="center" direction="column">
+        <Pagination
+          count={5}
+          color="primary"
+          onChange={handlePageChange}
+          style={{ marginTop: '2em', marginBottom: '2em' }}
+        >
+          {' '}
+        </Pagination>
       </Grid>
-
     </Container>
 
   );
