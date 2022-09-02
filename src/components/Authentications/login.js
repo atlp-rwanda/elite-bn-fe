@@ -12,6 +12,7 @@ import api from '../../../utils/api'
 import { ErrorAlert, InfoAlert, SuccessAlert, WarnAlert } from '../Notifications/toastAlert'
 import { Stack } from '@mui/material'
 import { alertActions } from '../../redux/features/toastAlert'
+import AlertMassage from '../../../utils/alertMessage'
 
 const alertStyle = {
   position: 'fixed',
@@ -41,7 +42,7 @@ const Login = () => {
     TextDecoder: 'none',
   }
   const signupLink = { margin: '20px 0px 0px 0px' }
-
+  const [successMsg, setSuccessMsg] = useState(null)
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -160,7 +161,10 @@ const Login = () => {
                 >
                   {props.isSubmitting ? 'Loading' : 'Sign In'}
                 </Button>
-
+                {successMsg ? <AlertMassage key={successMsg.key} message={successMsg.msg} /> : null}
+                {errorMessage ? (
+                  <AlertMassage key={errorMessage.key} message={errorMessage.msg} />
+                ) : null}
               </ThemeProvider>
             </Form>
           )}
@@ -206,4 +210,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default Login

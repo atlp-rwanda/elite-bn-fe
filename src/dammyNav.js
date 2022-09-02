@@ -10,8 +10,6 @@ export default function Nav() {
     <div style={{ display: path === '/dashboard' && 'none' }}>
       <nav>
         <ul>
-        
-
         </ul>
       </nav>
       <Outlet />

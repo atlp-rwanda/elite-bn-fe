@@ -1,36 +1,36 @@
-import React from "react";
-import Snackbar from "@material-ui/core/Snackbar";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
+import React from 'react'
+import Snackbar from '@material-ui/core/Snackbar'
+import IconButton from '@material-ui/core/IconButton'
+import CloseIcon from '@material-ui/icons/Close'
 
 export default function AlertMassage({ message }) {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(true)
   function handleClose(event, reason) {
-    if (reason === "clickaway") {
-      return;
+    if (reason === 'clickaway') {
+      return
     }
-    setOpen(false);
+    setOpen(false)
   }
 
   return (
     <div>
       <Snackbar
         anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "left"
+          vertical: 'bottom',
+          horizontal: 'left',
         }}
         open={open}
         autoHideDuration={3000}
         onClose={handleClose}
         variant="warning"
         ContentProps={{
-          "aria-describedby": "message-id"
+          'aria-describedby': 'message-id',
         }}
         message={message}
         action={[
           <IconButton key="close" onClick={handleClose}>
             <CloseIcon />
-          </IconButton>
+          </IconButton>,
         ]}
       />
     </div>

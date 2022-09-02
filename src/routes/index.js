@@ -6,12 +6,13 @@ import CounterView from '../Views/CounterView'
 import ThemeView from '../Views/ThemeView'
 import { ForgotPassword } from '../components/password/ForgotPassword'
 import { ResetPassword } from '../components/password/ResetPassword'
-
 import RegisterView from '../Views/RegisterView'
 import DashboardView from '../Views/Dashboard'
 import PrivateRoutes from '../../utils/privateRoute'
 import Logout from '../components/auth/auth.logout'
 import TripPageView from '../Views/tripView'
+import TableTemplate from '../components/TableTemplate'
+import UserRequests from '../Views/UserRequests'
 
 import RequestView from '../Views/RequestView'
 
@@ -25,6 +26,7 @@ function AllRoutes() {
           <Route path="dashboard" element={<DashboardView />} />
           <Route path="requests" element={<RequestView/>} />
           <Route path="tripPage" element={<TripPageView />} />
+          <Route path="trips" element={<UserRequests />} />
         </Route>
 
         <Route path="login" element={<Login />} />

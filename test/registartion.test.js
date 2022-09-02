@@ -1,17 +1,15 @@
 import React from 'react'
 import { screen, render, fireEvent, cleanup, waitFor, getByText } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Signup from '../src/components/Authentications/RegisterUser'
 import user from '@testing-library/user-event'
+import { act } from 'react-dom/test-utils'
+import Signup from '../src/components/Authentications/RegisterUser'
 import registerReducer, { setToken } from '../src/redux/features/registerReducer'
 import api from '../utils/api'
-
-import { act } from 'react-dom/test-utils'
 
 describe('findByText Examples', () => {
   test('should show a required field warning for each empty input field', async () => {
     render(<Signup />)
-
     act(() => {
       const submit = screen.getByTestId('Create account')
       fireEvent.click(submit)
