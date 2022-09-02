@@ -12,9 +12,10 @@ import DashboardView from '../Views/Dashboard'
 import PrivateRoutes from '../../utils/privateRoute'
 import Logout from '../components/auth/auth.logout'
 
-import Profiles from '../components/profile/profiles'
+// import Profiles from '../components/profile/profiles'
 
 import RequestView from '../Views/RequestView'
+import Profiles from '../Views/profileView'
 
 function AllRoutes() {
   return (
@@ -25,7 +26,7 @@ function AllRoutes() {
           <Route path="theme" element={<ThemeView />} />
           <Route path="dashboard" element={<DashboardView />} />
           <Route path="requests" element={<RequestView/>} />
-          <Route path="profile" element={<Profiles />} />
+         
         </Route>
 
         <Route path="login" element={<Login />} />
@@ -34,7 +35,7 @@ function AllRoutes() {
         <Route exact path="logout" element={<Logout/>} />
         <Route path="forgot-password" element={<ForgotPassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
-
+        <Route path="profile" element={<Profiles />} />
         <Route path="logout" element={<Logout/>} />
       
        
