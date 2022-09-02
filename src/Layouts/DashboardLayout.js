@@ -27,6 +27,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications'
 import MoreIcon from '@mui/icons-material/MoreVert'
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded'
 import ConnectingAirportsRoundedIcon from '@mui/icons-material/ConnectingAirportsRounded'
+import { Link } from 'react-router-dom'
 
 const drawerWidth = 240
 const Search = styled('div')(({ theme }) => ({
@@ -137,9 +138,14 @@ function Dboard(props) {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Help</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Log out</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        {' '}
+        <Link textDecoration="none" underline="none" color="black" to="/logout">
+          {' '}
+          Log out
+        </Link>
+      </MenuItem>
     </Menu>
   )
 

@@ -13,12 +13,7 @@ import MenuItem from '@mui/material/MenuItem'
 import { BrowserRouter as Router, useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-const pages = [
-  //  {
-  //     name: "Requests",
-  //     route: "/requests"
-  //   }
-]
+const pages = ['']
 const settings = ['Profile', 'Dashboard', 'Logout']
 
 const ResponsiveAppBar = () => {
@@ -43,14 +38,14 @@ const ResponsiveAppBar = () => {
   }
 
   return (
-    <AppBar position="static" style={{ display: path === '/dashboardLayout' && 'none' }}>
+    <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            // href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -92,8 +87,8 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Link to={page.route}>{page.name}</Link>
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -119,16 +114,51 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link style={{ textDecoration: 'none' }} to={page.route}>
-                <Button
-                  key={page.name}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  {page.name}
-                </Button>
-              </Link>
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page}
+              </Button>
             ))}
+          </Box>
+
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open settings">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Avatar alt="Remy Sharp" src="" />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">
+                    <Link
+                      to={setting.toLowerCase()}
+                      style={{ textDecoration: 'none', color: 'black' }}
+                    >
+                      {setting}
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              ))}
+            </Menu>
           </Box>
         </Toolbar>
       </Container>
