@@ -21,7 +21,7 @@ return (
     alignItems: 'center',
     height: '90vh'
   }}>
-    <p>Logging out</p>
+    <p>Logging out!!!</p>
     </div>
 )
 }
