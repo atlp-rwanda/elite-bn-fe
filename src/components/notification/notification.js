@@ -11,6 +11,7 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import useStyles from './styles'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Accordion from '@mui/material/Accordion';
@@ -32,6 +33,7 @@ import {
   thisNotification,
 } from '../../redux/features/notification';
 function Notifications() {
+  const classes=useStyles()
  
 const socket = io(process.env.REACT_APP_BACKEND_URL, {
   transports: ['websocket'],
@@ -107,18 +109,23 @@ onClick={handleClick}
   >
 {notifications?.payload?.data?.data?.map((notification)=>{
 return  <MenuItem >
-  
-  <List>
-          <ListItem disablePadding>
-    
-              <ListItemText primary={notification.title} /> <br />
-              <ListItemText primary={notification.message} />
-              <ListItemText primary={notification.createdAt} />
-            
-          </ListItem>
-             <Divider />
-        </List>
+     <Box
+      sx={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        '& > :not(style)': {
+          m: 1,
+          width: 128,
+          height: 128,
+        },
+      }}
+    >
+      <Paper elevation={0} />
+      <Paper />
+      <Paper elevation={3} />
+    </Box>
   </MenuItem>
+
 })}
    
   </Menu>
